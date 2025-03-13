@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="PanAfFGBG: Understanding the Impact of Backgrounds in Wildlife Behaviour Recognition">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PanAfFGBG: Understanding the Impact of Backgrounds in Wildlife Behaviour Recognition</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="">
+  <!-- ./static/images/favicon.svg -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://otto.com">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://obrookes.github.io/panaf.github.io/">
+              PanAf20k
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">PanAfFGBG: Understanding the Impact of Backgrounds in Wildlife
+              Behaviour Recognition</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Otto Brookes<sup>1,2†*</sup>,</span>
+              <span class="author-block">Maksim Kukushkin<sup>3,4*</sup>,</span>
+              <span class="author-block">Majid Mirmehdi<sup>1</sup>,</span>
+              <span class="author-block">Colleen Stephens<sup>5</sup>,</span>
+              <span class="author-block">Paula Dieguez<sup>5</sup>,</span>
+              <span class="author-block">Thurston C. Hicks<sup>6</sup>,</span>
+              <span class="author-block">Sorrel Jones<sup>5</sup>,</span>
+              <span class="author-block">Kevin Lee<sup>5</sup>,</span>
+              <span class="author-block">Maureen S. McCarthy<sup>5</sup>,</span>
+              <span class="author-block">Amelia Meier<sup>5</sup>,</span>
+              <span class="author-block">Emmanuelle Normand<sup>2</sup>,</span>
+              <span class="author-block">Erin G. Wessling<sup>7</sup>,</span>
+              <span class="author-block">Roman M. Wittig<sup>5,8</sup>,</span>
+              <span class="author-block">Kevin Langergraber<sup>9</sup>,</span>
+              <span class="author-block">Klaus Zuberbühler<sup>10</sup>,</span>
+              <span class="author-block">Lukas Boesch<sup>2</sup>,</span>
+              <span class="author-block">Thomas Schmid<sup>4,11</sup>,</span>
+              <span class="author-block">Mimi Arandjelovic<sup>5</sup>,</span>
+              <span class="author-block">Hjalmar Kühl<sup>5,12</sup>,</span>
+              <span class="author-block">Tilo Burghardt<sup>1</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>University of Bristol,</span>
+              <span class="author-block"><sup>2</sup>Wild Chimpanzee Foundation,</span>
+              <span class="author-block"><sup>3</sup>Leipzig University,</span>
+              <span class="author-block"><sup>4</sup>Martin Luther University Halle-Wittenberg,</span>
+              <span class="author-block"><sup>5</sup>Max Planck Institute for Evolutionary Anthropology,</span>
+              <span class="author-block"><sup>6</sup>University of Warsaw,</span>
+              <span class="author-block"><sup>7</sup>Harvard University,</span>
+              <span class="author-block"><sup>8</sup>University of Lyon,</span>
+              <span class="author-block"><sup>9</sup>Arizona State University,</span>
+              <span class="author-block"><sup>10</sup>University of St Andrews,</span>
+              <span class="author-block"><sup>11</sup>Lancaster University in Leipzig,</span>
+              <span class="author-block"><sup>12</sup>Senckenberg Museum of Natural History</span>
+            </div>
+
+            <!-- <div class="is-size-5 publication-authors"> -->
+            <!-- <span class="author-block">
+                <a href="https://otto.com">Otto Brookes</a><sup>1,2</sup>,</span>
+              <span class="author-block">
+                <a href="http://people.cs.bris.ac.uk/~burghard/">Tilo Burghardt</a><sup>1</sup>,</span>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>University of Bristol,</span>
+              <span class="author-block"><sup>2</sup>Wild Chimpanzee Foundation</span>
+            </div> -->
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2502.21201" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2502.21201" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+                <!-- Code Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://github.com/google/nerfies" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span> -->
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://data.bris.ac.uk/data/dataset/1h73erszj3ckn2qjwm4sqmr2wt"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Computer vision analysis of camera trap video footage is essential for wildlife conservation,
+              as captured behaviours offer some of the earliest indicators of changes in population health.
+              Recently, several high-impact animal behaviour datasets and methods have been introduced to
+              encourage their use; however, the role of behaviour-correlated background information and its
+              significant effect on out-of-distribution generalisation remain unexplored.
+            </p>
+            <p>
+              In response, we present the PanAf-FGBG dataset, featuring 20 hours of wild chimpanzee behaviours,
+              recorded at over 350 individual camera locations. Uniquely, it pairs every video with a chimpanzee
+              (referred to as a foreground video) with a corresponding background video (with no chimpanzee)
+              from the same camera location. We present two views of the dataset: one with overlapping camera
+              locations and one with disjoint locations. This setup enables, for the first time, direct evaluation
+              of in-distribution and out-of-distribution conditions, and for the impact of backgrounds on behaviour
+              recognition models to be quantified.All clips come with rich behavioural annotations and metadata
+              including unique camera IDs and detailed textual scene descriptions.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+
+      <section class="hero teaser">
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <img id="chimp" src="./static/images/disjoint_overlap.png" alt="Chimp Image" width="100%" height="100%">
+            <h2 class="subtitle has-text-justified">
+              PanAf-FGBG Overview: Six foreground-background video pairs are shown to visualise overlapping
+              (left) and disjoint (right) dataset configurations. On the left, train and test videos taken
+              from the same camera are selected, emphasizing that the locations are not mutually exclusive,
+              with backgrounds containing several cues that are highly correlated with the displayed behaviours
+              (i.e., algae fishing, a form of tool use). Train and test videos on the right are extracted from
+              mutually exclusive or \textit{disjoint} camera locations. They are extracted from forest and savannah,
+              respectively, and highlight the challenge of generalising to new locations.
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/KmP6EVBna6A" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <h2 class="subtitle has-text-justified"></h2>
+          </div>
+        </div>
+      </div>
+      <!--/ Paper video. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <div class="column is-full-width">
+        <!-- <h2 class="title is-3">Statistics</h2>
+
+        <div class="columns is-centered">
+
+          <div class="column">
+            <div class="content">
+              <h2 class="title is-4">Behaviour Distribution</h3>
+                <img id="class_dist" src="./static/images/class_dist.png" alt="Class Distribution" width="90%"
+                  height="90%">
+            </div>
+          </div>
+
+          <div class="column">
+            <h2 class="title is-4">Habitat</h3>
+              <div class="columns is-centered">
+                <div class="column content">
+                  <img id="habitat_location_dist" src="./static/images/country_site_dist.png"
+                    alt="Habitat & Location Distribution" width="90%" height="90%">
+                </div>
+              </div>
+          </div>
+        </div> -->
+
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Background Neutralisation</h2>
+            <div class="content has-text-justified" style="text-align: center;">
+              <p>
+                We present a latent-space normalisation technique that boosts out-of-distribution
+                performance by +5.42% mAP for convolutional and +3.75% mAP for transformer-based models.
+              </p>
+              <img id="background_neutralisation" src="./static/images/background_neutralisation.png"
+                alt="Background Neutralisation">
+            </div>
+            <br />
+          </div>
+        </div>
+
+        <style>
+          #background_neutralisation {
+            max-width: 75%;
+            height: auto;
+            display: block;
+            margin: auto;
+          }
+        </style>
+
+        <!-- Concurrent Work. -->
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Acknowledgements</h2>
+
+            <div class="content has-text-justified">
+              <p>
+                We thank the Pan African Programme: ‘The Cultured Chimpanzee’ team and its
+                collaborators for allowing the use of their data for this paper. We thank
+                Amelie Pettrich, Antonio Buzharevski, Eva Martinez Garcia, Ivana Kirchmair,
+                Sebastian Schütte, Linda Gerlach and Fabina Haas. We also thank management
+                and support staff across all sites; specifically Yasmin Moebius, Geoffrey
+                Muhanguzi, Martha Robbins, Henk Eshuis, Sergio Marrocoli and John Hart.
+                Thanks to the team at https://www.chimpandsee.org particularly Briana Harder,
+                Anja Landsmann, Laura K. Lynn, Zuzana Macháčková, Heidi Pfund, Kristeena Sigler
+                and Jane Widness. The work that allowed for the collection of the dataset was
+                funded by the Max Planck Society, Max Planck Society Innovation Fund, and Heinz
+                L. Krekeler. In this respect we would like to thank: Ministre des Eaux et Forêts,
+                Ministère de l’Enseignement supérieur et de la Recherche scientifique in Côte
+                d’Ivoire; Institut Congolais pour la Conservation de la Nature, Ministère de la
+                Recherche Scientifique in Democratic Republic of Congo; Forestry Development
+                Authority in Liberia; Direction Des Eaux Et Forêts, Chasses Et Conservation Des
+                Sols in Senegal; Makerere University Biological Field Station, Uganda National
+                Council for Science and Technology, Uganda Wildlife Authority, National Forestry
+                Authority in Uganda; National Institute for Forestry Development and Protected
+                Area Management, Ministry of Agriculture and Forests, Ministry of Fisheries and
+                Environment in Equatorial Guinea. This work was supported by the UKRI CDT in
+                Interactive AI (grant EP/S022937/1). This work was in part supported by the US
+                National Science Foundation Awards No. 2118240 "HDR Institute: Imageomics: A
+                New Frontier of Biological Information Powered by Knowledge-Guided Machine
+                Learning" and Award No. 2330423 and Natural Sciences and Engineering Research
+                Council of Canada under Award No. 585136 for the “AI and Biodiversity Change
+                (ABC) Global Center”.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--/ Concurrent Work. -->
+
+      </div>
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{brookes2025fgbg,
+        author    = {Otto Brookes and Maksim Kukushkin and Majid Mirmehdi and Colleen Stephens and Paula Dieguez and Thurston C. Hicks and Sorrel Jones and Kevin Lee and Maureen S. McCarthy and Amelia Meier and Emmanuelle Normand and Erin G. Wessling and Roman M. Wittig and Kevin Langergraber and Klaus Zuberbühler and Lukas Boesch and Thomas Schmid and Mimi Arandjelovic and Hjalmar Kühl and Tilo Burghardt},
+        title     = {PanAfFGBG: Understanding the Impact of Backgrounds in Wildlife Behaviour Recognition},
+        booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+        year      = {2025}
+      }
+      </code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="./static/videos/fgbg_paper.pdf">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/obrookes" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a> and
+              was adapted from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+              project page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
