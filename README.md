@@ -1,15 +1,14 @@
-# Nerfies
+# PanAf-FGBG
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the [PanAf-FGBG Dataset](https://nerfies.github.io).
 
-If you find Nerfies useful for your work please cite:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}
+@inproceedings{brookes2025fgbg,
+        author    = {Otto Brookes and Maksim Kukushkin and Majid Mirmehdi and Colleen Stephens and Paula Dieguez and Thurston C. Hicks and Sorrel Jones and Kevin Lee and Maureen S. McCarthy and Amelia Meier and Emmanuelle Normand and Erin G. Wessling and Roman M. Wittig and Kevin Langergraber and Klaus Zuberbühler and Lukas Boesch and Thomas Schmid and Mimi Arandjelovic and Hjalmar Kühl and Tilo Burghardt},
+        title     = {PanAfFGBG: Understanding the Impact of Backgrounds in Wildlife Behaviour Recognition},
+        booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+        year      = {2025}
+      }
 ```
 
 # Website License
