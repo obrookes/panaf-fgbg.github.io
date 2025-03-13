@@ -1,6 +1,6 @@
 # PanAf-FGBG
 
-This is the repository that contains source code for the [PanAf-FGBG Dataset](https://nerfies.github.io).
+This is the repository that contains source code for the [PanAf-FGBG Dataset](https://obrookes.github.io/panaf-fgbg.github.io/).
 
 ```
 @inproceedings{brookes2025fgbg,
