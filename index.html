@@ -144,7 +144,7 @@
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2502.21201" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/abs/2502.21201" class="external-link button is-normal is-dark is-rounded">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
@@ -152,7 +152,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2502.21201" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/abs/2502.21201" class="external-link button is-normal is-dark is-rounded">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
@@ -351,14 +351,15 @@
                 alt="Background Neutralisation">
             
             <br>
-         
-            <table class="table is-bordered is-hoverable is-narrow" >
+        <div class="table-container">
+          <table class="table is-bordered is-hoverable is-narrow">
               <thead>
                   <tr>
                       <th rowspan="2">Model</th>
                       <th rowspan="2">Subtraction</th>
                       <th colspan="2">D<sup>overlap</sup></th>
                       <th colspan="2">D<sup>disjoint</sup></th>
+                      <th rowspan="2">Toggle</th>
                   </tr>
                   <tr>
                       <th>uAP</th>
@@ -370,161 +371,201 @@
               <tbody>
                   <!-- 2D R50 -->
                   <tr>
-                      <td rowspan="7" class="table-model-name">2D R50</td>
+                      <td rowspan="1" class="table-model-name">2D R50</td>
                       <td>Baseline (F)</td>
                       <td>64.15</td>
                       <td>41.28</td>
                       <td>44.67</td>
                       <td>18.08</td>
+                      <td><button class="toggle-btn button is-dark is-small is-outlined" data-model="model-2dr50">Show more</button></td>
                   </tr>
-                  <tr>
+                  <tr class="model-content model-2dr50">
+                      <td class="table-model-name"></td>
                       <td>F+B</td>
                       <td><u>67.74</u></td>
                       <td><u>44.99</u></td>
                       <td>45.28</td>
                       <td>18.84</td>
+                      <td></td>
                   </tr>
-                  <tr class="input-space">
+                  <tr class="model-content model-2dr50 input-space">
+                      <td class="table-model-name"></td>
                       <td>F−B̃</td>
                       <td>65.96</td>
                       <td>42.12</td>
                       <td><b>54.53</b></td>
                       <td><b>26.65</b></td>
+                      <td></td>
                   </tr>
-                  <tr class="input-space">
+                  <tr class="model-content model-2dr50 input-space">
+                      <td class="table-model-name"></td>
                       <td>F−B</td>
                       <td><b>72.21</b></td>
                       <td><b>47.12</b></td>
                       <td><u>53.73</u></td>
                       <td><u>25.84</u></td>
+                      <td></td>
                   </tr>
-                  <tr class="embedding-space">
+                  <tr class="model-content model-2dr50 embedding-space">
+                      <td class="table-model-name"></td>
                       <td>None</td>
                       <td>56.21</td>
                       <td>38.84</td>
                       <td>27.24</td>
                       <td>17.94</td>
+                      <td></td>
                   </tr>
-                  <tr class="embedding-space">
+                  <tr class="model-content model-2dr50 embedding-space">
+                      <td class="table-model-name"></td>
                       <td>Linear</td>
                       <td>53.78</td>
                       <td>39.01</td>
                       <td>29.75</td>
                       <td>17.17</td>
+                      <td></td>
                   </tr>
-                  <tr class="embedding-space">
+                  <tr class="model-content model-2dr50 embedding-space">
+                      <td class="table-model-name"></td>
                       <td>Exponential</td>
                       <td>54.05</td>
                       <td>37.11</td>
                       <td>25.80</td>
                       <td>17.73</td>
+                      <td></td>
                   </tr>
                   
                   <!-- 3D R50 -->
                   <tr>
-                      <td rowspan="7" class="table-model-name">3D R50</td>
+                      <td rowspan="1" class="table-model-name">3D R50</td>
                       <td>Baseline (F)</td>
                       <td>72.79</td>
                       <td>49.32</td>
                       <td>57.74</td>
                       <td>30.89</td>
+                      <td><button class="toggle-btn button is-dark is-small is-outlined" data-model="model-3dr50">Show more</button></td>
                   </tr>
-                  <tr>
+                  <tr class="model-content model-3dr50">
+                      <td class="table-model-name"></td>
                       <td>F+B</td>
                       <td><u>76.41</u></td>
                       <td><b>53.57</b></td>
                       <td><u>65.66</u></td>
                       <td>39.17</td>
+                      <td></td>
                   </tr>
-                  <tr class="input-space">
+                  <tr class="model-content model-3dr50 input-space">
+                      <td class="table-model-name"></td>
                       <td>F−B̃</td>
                       <td>66.51</td>
                       <td>42.56</td>
                       <td>53.58</td>
                       <td>27.98</td>
+                      <td></td>
                   </tr>
-                  <tr class="input-space">
+                  <tr class="model-content model-3dr50 input-space">
+                      <td class="table-model-name"></td>
                       <td>F−B</td>
                       <td>71.93</td>
                       <td>46.36</td>
                       <td>53.92</td>
                       <td>25.05</td>
+                      <td></td>
                   </tr>
-                  <tr class="embedding-space">
+                  <tr class="model-content model-3dr50 embedding-space">
+                      <td class="table-model-name"></td>
                       <td>None</td>
                       <td>72.30</td>
                       <td>51.39</td>
                       <td>63.14</td>
                       <td>34.85</td>
+                      <td></td>
                   </tr>
-                  <tr class="embedding-space">
+                  <tr class="model-content model-3dr50 embedding-space">
+                      <td class="table-model-name"></td>
                       <td>Linear</td>
                       <td><b>77.31</b></td>
                       <td><u>52.82</u></td>
                       <td><b>66.69</b></td>
                       <td>36.31</td>
+                      <td></td>
                   </tr>
-                  <tr class="embedding-space">
+                  <tr class="model-content model-3dr50 embedding-space">
+                      <td class="table-model-name"></td>
                       <td>Exponential</td>
                       <td>73.52</td>
                       <td>51.24</td>
                       <td>64.58</td>
                       <td><u>36.36</u></td>
+                      <td></td>
                   </tr>
                   
                   <!-- MViT-V2 -->
                   <tr>
-                      <td rowspan="7" class="table-model-name">MViT-V2</td>
+                      <td rowspan="1" class="table-model-name">MViT-V2</td>
                       <td>Baseline (F)</td>
                       <td>75.44</td>
                       <td>51.54</td>
                       <td>70.50</td>
                       <td>35.29</td>
+                      <td><button class="toggle-btn button is-dark is-small is-outlined" data-model="model-mvit">Show more</button></td>
                   </tr>
-                  <tr>
+                  <tr class="model-content model-mvit">
+                      <td class="table-model-name"></td>
                       <td>F+B</td>
                       <td>72.82</td>
                       <td><u>53.49</u></td>
                       <td>68.00</td>
                       <td>38.09</td>
+                      <td></td>
                   </tr>
-                  <tr class="input-space">
+                  <tr class="model-content model-mvit input-space">
+                      <td class="table-model-name"></td>
                       <td>F−B̃</td>
                       <td>66.84</td>
                       <td>42.27</td>
                       <td>57.21</td>
                       <td>28.80</td>
+                      <td></td>
                   </tr>
-                  <tr class="input-space">
+                  <tr class="model-content model-mvit input-space">
+                      <td class="table-model-name"></td>
                       <td>F−B</td>
                       <td>74.90</td>
                       <td>49.40</td>
                       <td>61.22</td>
                       <td>31.51</td>
+                      <td></td>
                   </tr>
-                  <tr class="embedding-space">
+                  <tr class="model-content model-mvit embedding-space">
+                      <td class="table-model-name"></td>
                       <td>None</td>
                       <td>74.23</td>
                       <td>44.11</td>
                       <td>68.56</td>
                       <td>35.14</td>
+                      <td></td>
                   </tr>
-                  <tr class="embedding-space">
+                  <tr class="model-content model-mvit embedding-space">
+                      <td class="table-model-name"></td>
                       <td>Linear</td>
                       <td><b>79.32</b><sup>*</sup></td>
                       <td><b>53.83</b><sup>*</sup></td>
                       <td><b>71.64</b><sup>*</sup></td>
                       <td><u>39.04</u></td>
+                      <td></td>
                   </tr>
-                  <tr class="embedding-space">
+                  <tr class="model-content model-mvit embedding-space">
+                      <td class="table-model-name"></td>
                       <td>Exponential</td>
                       <td><u>77.70</u></td>
                       <td>50.93</td>
                       <td><u>71.28</u></td>
                       <td><b>39.25</b><sup>*</sup></td>
+                      <td></td>
                   </tr>
               </tbody>
-            </table>
+          </table>
+      </div>
  
             </div>
             <h2 class="subtitle is-6 has-text-justified">
@@ -562,6 +603,18 @@
           video {
           display: block;
           opacity: 1 !important;
+        }
+
+
+        .model-content {
+            display: none;
+        }
+        
+        .model-content.active {
+            display: table-row;
+        }
+        .table-container {
+            overflow-x: auto;
         }
 
          
@@ -646,6 +699,29 @@
       </div>
     </div>
   </footer>
+
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButtons = document.querySelectorAll('.toggle-btn');
+            
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const modelClass = this.getAttribute('data-model');
+                    const modelRows = document.querySelectorAll('.' + modelClass);
+                    
+                    modelRows.forEach(row => {
+                        row.classList.toggle('active');
+                    });
+                    
+                    if (this.textContent === 'Show more') {
+                        this.textContent = 'Hide results';
+                    } else {
+                        this.textContent = 'Show more';
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 
