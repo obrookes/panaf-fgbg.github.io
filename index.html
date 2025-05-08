@@ -529,14 +529,14 @@
         
         <div class="columns is-centered">
           <div class="column is-full-width">
-            <h2 class="title is-3">Background duration</h2>
+            <h2 class="title is-3by1">Background duration</h2>
             <div class="content has-text-justified" style="text-align: center;">
               <p>
                 Noting that foreground videos may contain some frames with no animals, effectively supplying background only information for these frames, we aim at quantifying the effect of this on model performance.
               </p>
-              <img id="background_duration" src="./static/images/background_concatenation.png"
-                alt="Background Concatenation">
-
+              <figure class="image" id="background_duration">
+                <img src="./static/images/background_concatenation.png" alt="Background Concatenation">
+              </figure>
             </div>
           </div> 
         </div>  
@@ -551,9 +551,10 @@
                 We present a latent-space normalisation technique that boosts out-of-distribution
                 performance by +5.42% mAP for convolutional and +3.75% mAP for transformer-based models.
               </p>
-              <img id="background_neutralisation" src="./static/images/background_neutralisation.png"
-                alt="Background Neutralisation">
-            
+              <figure class="image">
+                  <img id="background_neutralisation" src="./static/images/background_neutralisation.png"
+                    alt="Background Neutralisation">
+              </figure>
             <br>
         <div class="table-container">
           <table class="table is-bordered is-hoverable">
@@ -783,16 +784,36 @@
 
 
         <style>
-
           .ratio {
             background-color:rgba(173, 216, 230, 0.2);
           }
-          #background_neutralisation {
-            max-width: 50%;
+
+          #background_neutralisation, #background_duration, #footer_image {
             height: auto;
             display: block;
             margin: auto;
           }
+
+
+          @media (min-width: 768px) {
+            #background_neutralisation {
+              width: 50%; /* Scale down on larger screens */
+            }
+          }
+
+          @media (max-width: 768px) {
+            #background_neutralisation {
+              width: 100%; /* Scale up on smaller screens */
+            }
+            #background_duration {
+              width: 100%; 
+            }
+            #footer_image {
+              width: 100%; 
+            }
+          }
+
+
           .input-space {
             background-color: rgba(144, 238, 144, 0.2);
           }
@@ -809,11 +830,11 @@
             font-style: italic;
         }
 
-          .table-model-name {
+        .table-model-name {
             text-align: left;
             font-weight: bold;
-          }
-          video {
+        }
+        video {
           display: block;
           opacity: 1 !important;
         }
@@ -895,7 +916,9 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-8">
-          <img src="./static/images/footer.png">
+          <figure class="image">
+            <img id="footer_image" src="./static/images/footer.png">
+          </figure>
         </div>
       </div>
       <div class="columns is-centered">
