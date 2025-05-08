@@ -200,34 +200,39 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-disjoint1">
-          <video poster="" id="disjoint1" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/d_disjoint1.mp4" type="video/mp4">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/video_1.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-disjoint2">
-          <video poster="" id="disjoint2" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/d_disjoint2.mp4" type="video/mp4">
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/video_2.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-disjoint3">
-          <video poster="" id="disjoint3" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/d_disjoint3.mp4" type="video/mp4">
+        <div class="item item-video_3">
+          <video poster="" id="video_3" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/video_3.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-overlap1">
-          <video poster="" id="overlap1" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/d_overlap1.mp4" type="video/mp4">
+        <div class="item item-video_4">
+          <video poster="" id="video_4" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/video_4.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-overlap2">
-          <video poster="" id="overlap2" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/d_overlap2.mp4" type="video/mp4">
+        <div class="item item-video_5">
+          <video poster="" id="video_5" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/video_5.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-overlap3">
-          <video poster="" id="overlap3" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/d_overlap3.mp4" type="video/mp4">
+        <div class="item item-video_6">
+          <video poster="" id="video_6" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/video_6.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video_7">
+          <video poster="" id="video_7" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/video_7.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -352,7 +357,7 @@
                 <!-- Dummy -->
                 <tr class="gray-bg">
                     <td>1</td>
-                    <td>Dummy</td>
+                    <td><b>Dummy</b></td>
                     <td>-</td>
                     <td>19.15</td>
                     <td>14.73</td>
@@ -364,7 +369,7 @@
                 <!-- 2D R50 -->
                 <tr >
                     <td>2</td>
-                    <td rowspan="1">2D R50</td>
+                    <td rowspan="1"><b>2D R50</b></td>
                     <td><span class="math">F</span></td>
                     <td>64.15</td>
                     <td>41.28</td>
@@ -416,7 +421,7 @@
                 <!-- 3D R50 -->
                 <tr>
                     <td >7</td>
-                    <td rowspan="1">3D R50</td>
+                    <td rowspan="1"><b>3D R50</b></td>
                     <td><span class="math">F</span></td>
                     <td>72.79</td>
                     <td>49.32</td>
@@ -468,7 +473,7 @@
                 <!-- MViT-V2 -->
                 <tr >
                     <td >12</td>
-                    <td rowspan="1">MViT-V2</td>
+                    <td rowspan="1"><b>MViT-V2</b></td>
                     <td><span class="math">F</span></td>
                     <td><u>75.44</u></td>
                     <td><u>51.54</u></td>
@@ -551,10 +556,9 @@
                 We present a latent-space normalisation technique that boosts out-of-distribution
                 performance by +5.42% mAP for convolutional and +3.75% mAP for transformer-based models.
               </p>
-              <figure class="image">
                   <img id="background_neutralisation" src="./static/images/background_neutralisation.png"
                     alt="Background Neutralisation">
-              </figure>
+     
             <br>
         <div class="table-container">
           <table class="table is-bordered is-hoverable">
@@ -829,7 +833,6 @@
             font-family: 'Computer Modern', 'Latin Modern Math', 'Times New Roman', serif;
             font-style: italic;
         }
-
         .table-model-name {
             text-align: left;
             font-weight: bold;
@@ -916,9 +919,7 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-8">
-          <figure class="image">
             <img id="footer_image" src="./static/images/footer.png">
-          </figure>
         </div>
       </div>
       <div class="columns is-centered">
