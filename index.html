@@ -322,6 +322,210 @@
               </div>
           </div>
         </div> -->
+
+         <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Background reliance</h2>
+            <div class="content has-text-justified" style="text-align: center;">
+              <p>
+                Background reliance is quantified by training model architectures on the foreground (<span class="math">F</span>), background (<span class="math">B</span>), and synthetic background videos (<span class="math">B̃</span>).
+              </p>
+                      <div class="table-container">
+        <table  class="table is-bordered is-hoverable">
+            <thead>
+                <tr>
+                    <th rowspan="2"></th>
+                    <th rowspan="2">Model</th>
+                    <th rowspan="2">Data</th>
+                    <th colspan="2"><span class="math">D<sup>overlap</sup></span></th>
+                    <th colspan="2"><span class="math">D<sup>disjoint</sup></span></th>
+                    <th rowspan="2">Toggle</th>
+                </tr>
+                <tr>
+                    <th>μAP</th>
+                    <th>mAP</th>
+                    <th>μAP</th>
+                    <th>mAP</th>  
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dummy -->
+                <tr class="gray-bg">
+                    <td>1</td>
+                    <td>Dummy</td>
+                    <td>-</td>
+                    <td>19.15</td>
+                    <td>14.73</td>
+                    <td>19.61</td>
+                    <td>14.87</td>
+                    <td></td>
+                </tr>
+                
+                <!-- 2D R50 -->
+                <tr >
+                    <td>2</td>
+                    <td rowspan="1">2D R50</td>
+                    <td><span class="math">F</span></td>
+                    <td>64.15</td>
+                    <td>41.28</td>
+                    <td>44.67</td>
+                    <td>18.08</td>
+                    <td><button class="toggle-btn button is-small is-dark is-outlined" data-model="model-2dr50">Show more</button></td>
+                </tr>
+                <tr class="model-content model-2dr50">
+                    <td>3</td>
+                    <td></td>
+                    <td><span class="math">B</span></td>
+                    <td>57.13</td>
+                    <td>30.03</td>
+                    <td>45.80</td>
+                    <td>18.27</td>
+                    <td></td>
+                </tr>
+                <tr class="model-content model-2dr50">
+                    <td >4</td>
+                    <td></td>
+                    <td><span class="math">B̃</span></td>
+                    <td>57.87</td>
+                    <td>30.82</td>
+                    <td>48.28</td>
+                    <td>20.39</td>
+                    <td></td>
+                </tr>
+                <tr class="model-content model-2dr50">
+                    <td >5</td>
+                    <td></td>
+                    <td><span class="math">F+B</span></td>
+                    <td>67.74</td>
+                    <td>44.99</td>
+                    <td>45.28</td>
+                    <td>18.84</td>
+                    <td></td>
+                </tr>
+                <tr class="model-content model-2dr50 ratio">
+                    <td>6</td>
+                    <td></td>
+                    <td></td>
+                    <td><i>0.89</i></td>
+                    <td><i>0.74</i></td>
+                    <td><i>1.02</i></td>
+                    <td><i>0.98</i></td>
+                    <td></td>
+                </tr>
+                
+                <!-- 3D R50 -->
+                <tr>
+                    <td >7</td>
+                    <td rowspan="1">3D R50</td>
+                    <td><span class="math">F</span></td>
+                    <td>72.79</td>
+                    <td>49.32</td>
+                    <td>57.74</td>
+                    <td>30.89</td>
+                    <td><button class="toggle-btn button is-small is-dark is-outlined" data-model="model-3dr50">Show more</button></td>
+                </tr>
+                <tr class="model-content model-3dr50">
+                    <td >8</td>
+                    <td></td>
+                    <td><span class="math">B</span></td>
+                    <td>58.92</td>
+                    <td>31.72</td>
+                    <td>48.40</td>
+                    <td>21.38</td>
+                    <td></td>
+                </tr>
+                <tr class="model-content model-3dr50">
+                    <td >9</td>
+                    <td></td>
+                    <td><span class="math">B̃</span></td>
+                    <td>59.60</td>
+                    <td>32.86</td>
+                    <td>49.29</td>
+                    <td>21.64</td>
+                    <td></td>
+                </tr>
+                <tr class="model-content model-3dr50">
+                    <td >10</td>
+                    <td></td>
+                    <td><span class="math">F+B</span></td>
+                    <td><b>76.41</b></td>
+                    <td><b>53.57</b></td>
+                    <td>65.66</td>
+                    <td><b>39.17</b></td>
+                    <td></td>
+                </tr>
+                <tr class="model-content model-3dr50 ratio">
+                    <td >11</td>
+                    <td></td>
+                    <td></td>
+                    <td><i>0.80</i></td>
+                    <td><i>0.66</i></td>
+                    <td><i>0.83</i></td>
+                    <td><i>0.69</i></td>
+                    <td></td>
+                </tr>
+                
+                <!-- MViT-V2 -->
+                <tr >
+                    <td >12</td>
+                    <td rowspan="1">MViT-V2</td>
+                    <td><span class="math">F</span></td>
+                    <td><u>75.44</u></td>
+                    <td><u>51.54</u></td>
+                    <td><u><b>70.50</b></u></td>
+                    <td><u>35.29</u></td>
+                    <td><button class="toggle-btn button is-small is-dark is-outlined" data-model="model-mvit">Show more</button></td>
+                </tr>
+                <tr class="model-content model-mvit">
+                    <td >13</td>
+                    <td></td>
+                    <td><span class="math">B</span></td>
+                    <td>61.90</td>
+                    <td>32.74</td>
+                    <td>50.03</td>
+                    <td>24.00</td>
+                    <td></td>
+                </tr>
+                <tr class="model-content model-mvit">
+                    <td >14</td>
+                    <td></td>
+                    <td><span class="math">B̃</span></td>
+                    <td>62.15</td>
+                    <td>33.58</td>
+                    <td>52.13</td>
+                    <td>24.77</td>
+                    <td></td>
+                </tr>
+                <tr class="model-content model-mvit">
+                    <td >15</td>
+                    <td></td>
+                    <td><span class="math">F+B</span></td>
+                    <td>72.82</td>
+                    <td>53.49</td>
+                    <td>68.00</td>
+                    <td>38.09</td>
+                    <td></td>
+                </tr>
+                <tr class="model-content model-mvit ratio">
+                    <td >16</td>
+                    <td></td>
+                    <td></td>
+                    <td><i>0.82</i></td>
+                    <td><i>0.65</i></td>
+                    <td><i>0.70</i></td>
+                    <td><i>0.68</i></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+            </div>
+            <h4 class="subtitle is-6 has-text-justified">
+              <b>Quantifying Background Reliance.</b> Performance comparison of models trained on F, B, and B videos. Dual-stream models are indicated by F+B. The absolute highest performance is indicated in <b>bold</b> whereas best performance using only a single-stream is <u>underlined</u>. The performance based on class distribution only is given by a dummy classifier <span style="background-color:rgba(173, 216, 230, 0.2);">(see row 1)</span>. The background-to-foreground performance ratio <span class="math">AP<sup>B</sup>/AP<sup>F</sup></span> also provided (see rows 6, 11, and 16). Performance is reported on <span class="math">D<sup>overlap</sup></span> and  <span class="math">D<sup>disjoint</sup></span> where Fig. visualises an mAP scatter plot between the two for 3D R50.
+            </h4>
+
+          </div> 
+        </div>  
         
         <div class="columns is-centered">
           <div class="column is-full-width">
@@ -352,19 +556,19 @@
             
             <br>
         <div class="table-container">
-          <table class="table is-bordered is-hoverable is-narrow">
+          <table class="table is-bordered is-hoverable">
               <thead>
                   <tr>
                       <th rowspan="2">Model</th>
                       <th rowspan="2">Subtraction</th>
-                      <th colspan="2">D<sup>overlap</sup></th>
-                      <th colspan="2">D<sup>disjoint</sup></th>
+                      <th colspan="2"><span class="math">D<sup>overlap</sup></span></th>
+                      <th colspan="2"><span class="math">D<sup>disjoint</sup></span></th>
                       <th rowspan="2">Toggle</th>
                   </tr>
                   <tr>
-                      <th>uAP</th>
+                      <th>μAP</th>
                       <th>mAP</th>
-                      <th>uAP</th>
+                      <th>μAP</th>
                       <th>mAP</th>
                   </tr>
               </thead>
@@ -372,41 +576,41 @@
                   <!-- 2D R50 -->
                   <tr>
                       <td rowspan="1" class="table-model-name">2D R50</td>
-                      <td>Baseline (F)</td>
+                      <td>Baseline (<span class="math">F</span>)</td>
                       <td>64.15</td>
                       <td>41.28</td>
                       <td>44.67</td>
                       <td>18.08</td>
-                      <td><button class="toggle-btn button is-dark is-small is-outlined" data-model="model-2dr50">Show more</button></td>
+                      <td><button class="toggle-btn button is-dark is-small is-outlined" data-model="model-2dr50-bgsub">Show more</button></td>
                   </tr>
-                  <tr class="model-content model-2dr50">
+                  <tr class="model-content model-2dr50-bgsub">
                       <td class="table-model-name"></td>
-                      <td>F+B</td>
+                      <td><span class="math">F+B</span></td>
                       <td><u>67.74</u></td>
                       <td><u>44.99</u></td>
                       <td>45.28</td>
                       <td>18.84</td>
                       <td></td>
                   </tr>
-                  <tr class="model-content model-2dr50 input-space">
+                  <tr class="model-content model-2dr50-bgsub input-space">
                       <td class="table-model-name"></td>
-                      <td>F−B̃</td>
+                      <td><span class="math">F−B̃</span></td>
                       <td>65.96</td>
                       <td>42.12</td>
                       <td><b>54.53</b></td>
                       <td><b>26.65</b></td>
                       <td></td>
                   </tr>
-                  <tr class="model-content model-2dr50 input-space">
+                  <tr class="model-content model-2dr50-bgsub input-space">
                       <td class="table-model-name"></td>
-                      <td>F−B</td>
+                      <td><span class="math">F−B</span></td>
                       <td><b>72.21</b></td>
                       <td><b>47.12</b></td>
                       <td><u>53.73</u></td>
                       <td><u>25.84</u></td>
-                      <td></td>
+                      <td ></td>
                   </tr>
-                  <tr class="model-content model-2dr50 embedding-space">
+                  <tr class="model-content model-2dr50-bgsub embedding-space">
                       <td class="table-model-name"></td>
                       <td>None</td>
                       <td>56.21</td>
@@ -415,7 +619,7 @@
                       <td>17.94</td>
                       <td></td>
                   </tr>
-                  <tr class="model-content model-2dr50 embedding-space">
+                  <tr class="model-content model-2dr50-bgsub embedding-space">
                       <td class="table-model-name"></td>
                       <td>Linear</td>
                       <td>53.78</td>
@@ -424,7 +628,7 @@
                       <td>17.17</td>
                       <td></td>
                   </tr>
-                  <tr class="model-content model-2dr50 embedding-space">
+                  <tr class="model-content model-2dr50-bgsub embedding-space">
                       <td class="table-model-name"></td>
                       <td>Exponential</td>
                       <td>54.05</td>
@@ -437,41 +641,41 @@
                   <!-- 3D R50 -->
                   <tr>
                       <td rowspan="1" class="table-model-name">3D R50</td>
-                      <td>Baseline (F)</td>
+                      <td>Baseline (<span class="math">F</span>)</td>
                       <td>72.79</td>
                       <td>49.32</td>
                       <td>57.74</td>
                       <td>30.89</td>
-                      <td><button class="toggle-btn button is-dark is-small is-outlined" data-model="model-3dr50">Show more</button></td>
+                      <td><button class="toggle-btn button is-dark is-small is-outlined" data-model="model-3dr50-bgsub">Show more</button></td>
                   </tr>
-                  <tr class="model-content model-3dr50">
+                  <tr class="model-content model-3dr50-bgsub">
                       <td class="table-model-name"></td>
-                      <td>F+B</td>
+                      <td><span class="math">F+B</span></td>
                       <td><u>76.41</u></td>
                       <td><b>53.57</b></td>
                       <td><u>65.66</u></td>
                       <td>39.17</td>
                       <td></td>
                   </tr>
-                  <tr class="model-content model-3dr50 input-space">
+                  <tr class="model-content model-3dr50-bgsub input-space">
                       <td class="table-model-name"></td>
-                      <td>F−B̃</td>
+                      <td><span class="math">F−B̃</span></td>
                       <td>66.51</td>
                       <td>42.56</td>
                       <td>53.58</td>
                       <td>27.98</td>
                       <td></td>
                   </tr>
-                  <tr class="model-content model-3dr50 input-space">
+                  <tr class="model-content model-3dr50-bgsub input-space">
                       <td class="table-model-name"></td>
-                      <td>F−B</td>
+                      <td><span class="math">F−B</span></td>
                       <td>71.93</td>
                       <td>46.36</td>
                       <td>53.92</td>
                       <td>25.05</td>
                       <td></td>
                   </tr>
-                  <tr class="model-content model-3dr50 embedding-space">
+                  <tr class="model-content model-3dr50-bgsub embedding-space">
                       <td class="table-model-name"></td>
                       <td>None</td>
                       <td>72.30</td>
@@ -480,7 +684,7 @@
                       <td>34.85</td>
                       <td></td>
                   </tr>
-                  <tr class="model-content model-3dr50 embedding-space">
+                  <tr class="model-content model-3dr50-bgsub embedding-space">
                       <td class="table-model-name"></td>
                       <td>Linear</td>
                       <td><b>77.31</b></td>
@@ -489,7 +693,7 @@
                       <td>36.31</td>
                       <td></td>
                   </tr>
-                  <tr class="model-content model-3dr50 embedding-space">
+                  <tr class="model-content model-3dr50-bgsub embedding-space">
                       <td class="table-model-name"></td>
                       <td>Exponential</td>
                       <td>73.52</td>
@@ -502,41 +706,41 @@
                   <!-- MViT-V2 -->
                   <tr>
                       <td rowspan="1" class="table-model-name">MViT-V2</td>
-                      <td>Baseline (F)</td>
+                      <td>Baseline (<span class="math">F</span>)</td>
                       <td>75.44</td>
                       <td>51.54</td>
                       <td>70.50</td>
                       <td>35.29</td>
-                      <td><button class="toggle-btn button is-dark is-small is-outlined" data-model="model-mvit">Show more</button></td>
+                      <td><button class="toggle-btn button is-dark is-small is-outlined" data-model="model-mvit-bgsub">Show more</button></td>
                   </tr>
-                  <tr class="model-content model-mvit">
+                  <tr class="model-content model-mvit-bgsub">
                       <td class="table-model-name"></td>
-                      <td>F+B</td>
+                      <td><span class="math">F+B</span></td>
                       <td>72.82</td>
                       <td><u>53.49</u></td>
                       <td>68.00</td>
                       <td>38.09</td>
                       <td></td>
                   </tr>
-                  <tr class="model-content model-mvit input-space">
+                  <tr class="model-content model-mvit-bgsub input-space">
                       <td class="table-model-name"></td>
-                      <td>F−B̃</td>
+                      <td><span class="math">F−B̃</span></td>
                       <td>66.84</td>
                       <td>42.27</td>
                       <td>57.21</td>
                       <td>28.80</td>
                       <td></td>
                   </tr>
-                  <tr class="model-content model-mvit input-space">
+                  <tr class="model-content model-mvit-bgsub input-space">
                       <td class="table-model-name"></td>
-                      <td>F−B</td>
+                      <td><span class="math">F−B</span></td>
                       <td>74.90</td>
                       <td>49.40</td>
                       <td>61.22</td>
                       <td>31.51</td>
                       <td></td>
                   </tr>
-                  <tr class="model-content model-mvit embedding-space">
+                  <tr class="model-content model-mvit-bgsub embedding-space">
                       <td class="table-model-name"></td>
                       <td>None</td>
                       <td>74.23</td>
@@ -545,7 +749,7 @@
                       <td>35.14</td>
                       <td></td>
                   </tr>
-                  <tr class="model-content model-mvit embedding-space">
+                  <tr class="model-content model-mvit-bgsub embedding-space">
                       <td class="table-model-name"></td>
                       <td>Linear</td>
                       <td><b>79.32</b><sup>*</sup></td>
@@ -554,7 +758,7 @@
                       <td><u>39.04</u></td>
                       <td></td>
                   </tr>
-                  <tr class="model-content model-mvit embedding-space">
+                  <tr class="model-content model-mvit-bgsub embedding-space">
                       <td class="table-model-name"></td>
                       <td>Exponential</td>
                       <td><u>77.70</u></td>
@@ -570,7 +774,7 @@
             </div>
             <h2 class="subtitle is-6 has-text-justified">
                   <b>Quantifying Performance Improvements of Background Subtraction.</b>
-                  Comparison of the 2D R50, 3D R50, and MViT-V2 models on both dataset configurations. Performance is reported when training on (F−B) or (F−B̃) videos in input <span style="background-color: rgba(144, 238, 144, 0.2);">(light green)</span> and embedding space <span style="background-color:rgba(173, 216, 230, 0.2);">(light blue)</span>. <strong>First</strong> and <u>second</u> highest scores are indicated for each model, while the highest overall scores are marked by an asterisk (*).
+                  Comparison of the 2D R50, 3D R50, and MViT-V2 models on both dataset configurations. Performance is reported when training on (<span class="math">F−B</span>) or (<span class="math">F−B̃</span>) videos in input <span style="background-color: rgba(144, 238, 144, 0.2);">(light green)</span> and embedding space <span style="background-color:rgba(173, 216, 230, 0.2);">(light blue)</span>. <strong>First</strong> and <u>second</u> highest scores are indicated for each model, while the highest overall scores are marked by an asterisk (*).
             </h2 >
               
             <br />
@@ -579,6 +783,10 @@
 
 
         <style>
+
+          .ratio {
+            background-color:rgba(173, 216, 230, 0.2);
+          }
           #background_neutralisation {
             max-width: 50%;
             height: auto;
@@ -595,6 +803,11 @@
           th, td {
             text-align: center;
           }
+
+        .math {
+            font-family: 'Computer Modern', 'Latin Modern Math', 'Times New Roman', serif;
+            font-style: italic;
+        }
 
           .table-model-name {
             text-align: left;
