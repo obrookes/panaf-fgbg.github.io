@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="">
+  <link rel="icon" href="./static/images/favicon.png" type="image/png">
   <!-- ./static/images/favicon.svg -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -317,7 +317,7 @@
         <div class="container is-max-desktop">
           <div class="hero-body">
             <video id="chimp" autoplay=""  muted="" loop="" playsinline="" alt="Chimp Image" width="100%" height="100%"><source src="./static/videos/disjoint_overlap.mp4" type="video/mp4"> </video>
-            <h5 class="subtitle is-6 has-text-justified">
+            <h2 class="subtitle is-6 has-text-justified" style="padding-top: 1.1428em">
               <b>PanAf-FGBG Overview:</b> Six foreground-background video pairs are shown to visualise overlapping
               (left) and disjoint (right) dataset configurations. On the left, train and test videos taken
               from the same camera are selected, emphasizing that the locations are not mutually exclusive,
@@ -325,7 +325,7 @@
               (i.e., algae fishing, a form of tool use). Train and test videos on the right are extracted from
               mutually exclusive or <i>disjoint</i> camera locations. They are extracted from forest and savannah,
               respectively, and highlight the challenge of generalising to new locations.
-            </h5>
+            </h2>
           </div>
         </div>
       </section>
@@ -594,16 +594,21 @@
         <div class="columns is-centered">
           <div class="column is-full-width">
             <h2 class="title is-3">Background Neutralisation</h2>
-            
+    
             <div class="content has-text-justified" style="text-align: center;">
               <p>
                 We present a latent-space normalisation technique that boosts out-of-distribution
                 performance by +5.42% mAP for convolutional and +3.75% mAP for transformer-based models.
               </p>
-                  <img id="background_neutralisation" src="./static/images/background_neutralisation.png"
-                    alt="Background Neutralisation">
-     
-            <br>
+              <video id="background_neutralisation" autoplay="" muted="" loop="" playsinline="" alt="Background Neutralisation Video" width="50%" height="100%">
+                <source src="./static/videos/background_neutralisation.mp4" type="video/mp4">
+              </video>
+              <h2 class="subtitle has-text-justified is-6" style="font-weight: 400;">
+                <b>Latent Space Background Compensation.</b> The proposed operation uses <span class="math">α</span> to perform a weighted subtraction of background features (computed via the dataset pairing of a real-world, background video) from foreground features in latent space. The dotted line between the encoders indicates shared weights (i.e., they are the same model).
+              </h2>
+    
+              
+ 
         <div class="table-container">
           <table class="table is-bordered is-hoverable">
               <thead>
@@ -819,7 +824,6 @@
               </tbody>
           </table>
       </div>
- 
             </div>
             <h2 class="subtitle is-6 has-text-justified">
                   <b>Quantifying Performance Improvements of Background Subtraction.</b>
@@ -851,7 +855,7 @@
 
           @media (max-width: 768px) {
             #background_neutralisation {
-              width: 100%; /* Scale up on smaller screens */
+              width: 95%; /* Scale up on smaller screens */
             }
             #background_duration {
               width: 100%; 
