@@ -155,3 +155,93 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.ratio {
+  background-color:rgba(173, 216, 230, 0.2);
+}
+
+#background_neutralisation, #background_duration, #footer_image {
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+
+@media (min-width: 768px) {
+  #background_neutralisation {
+    width: 50%; /* Scale down on larger screens */
+  }
+}
+
+@media (max-width: 768px) {
+  #background_neutralisation {
+    width: 95%; /* Scale up on smaller screens */
+  }
+  #background_duration {
+    width: 100%; 
+  }
+  #footer_image {
+    width: 100%; 
+  }
+}
+
+.results-item {
+  padding: 10px;
+}
+.results-item video {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+.slider-pagination {
+  padding: 0.15rem 1rem; 
+}
+.slider-navigation-next, .slider-navigation-previous {
+  background-color: #4a4a4a;
+  color: white;
+  width: 35px;
+  height: 35px;
+}
+.slider-navigation-next:hover, .slider-navigation-previous:hover {
+  transform: scale(1.04);
+  background-color: #7a7a7a;
+}
+
+.input-space {
+  background-color: rgba(144, 238, 144, 0.2);
+}
+.embedding-space {
+  background-color: rgba(173, 216, 230, 0.2);
+}
+
+th, td {
+  text-align: center;
+}
+
+.math {
+  font-family: 'Computer Modern', 'Latin Modern Math', 'Times New Roman', serif;
+  font-style: italic;
+}
+.table-model-name {
+  text-align: left;
+  font-weight: bold;
+}
+video {
+display: block;
+opacity: 1 !important;
+}
+
+
+.model-content {
+  display: none;
+}
+
+.model-content.active {
+  display: table-row;
+}
+.table-container {
+  overflow-x: auto;
+}
+
