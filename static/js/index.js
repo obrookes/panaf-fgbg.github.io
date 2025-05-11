@@ -1,26 +1,5 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
-const INTERP_BASE = "./static/interpolation/stacked";
-const NUM_INTERP_FRAMES = 240;
-
-const interp_images = [];
-
-function preloadInterpolationImages() {
-  for (let i = 0; i < NUM_INTERP_FRAMES; i++) {
-    const path = `${INTERP_BASE}/${String(i).padStart(6, '0')}.jpg`;
-    const img = new Image();
-    img.src = path;
-    interp_images[i] = img;
-  }
-}
-
-function setInterpolationImage(i) {
-  const image = interp_images[i];
-  image.ondragstart = () => false;
-  image.oncontextmenu = () => false;
-  $('#interpolation-image-wrapper').empty().append(image);
-}
-
 $(document).ready(function () {
   // Toggle navbar burger menu
   $(".navbar-burger").click(function () {
@@ -46,15 +25,6 @@ $(document).ready(function () {
   if (element?.bulmaCarousel) {
     element.bulmaCarousel.on('before-show', state => console.log(state));
   }
-
-  preloadInterpolationImages();
-
-  $('#interpolation-slider').on('input', function () {
-    setInterpolationImage(this.value);
-  });
-
-  setInterpolationImage(0);
-  $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
   bulmaSlider.attach();
 });
 
