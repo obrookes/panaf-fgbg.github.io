@@ -69,11 +69,8 @@
           </div>
         </div>
       </div>
-
     </div>
   </nav>
-
-
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -125,6 +122,13 @@
                 <span class="author-block"><sup>12</sup>Senckenberg Museum of Natural History</span>
               </div>
             </div>
+            <br>
+          <div class="column has-text-centered">
+            <span class="is-5">
+              <sup>*</sup>Otto and Maksim are co-first authors and have equal technical contribution.
+              <br>
+              <sup>†</sup>Otto is the corresponding author.
+            </span>
 
             <!-- <div class="is-size-5 publication-authors"> -->
             <!-- <span class="author-block">
@@ -195,7 +199,6 @@
       </div>
     </div>
   </section>
-
  <section class="hero is-dark is-small">
   <div class="hero-body">
     <div class="container">
@@ -283,12 +286,13 @@
     </div>
   </div>
 </section>
+<h2 class="title is-3 band">Abstract</h2>
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Abstract</h2>
+
           <div class="content has-text-justified">
             <p>
               Computer vision analysis of camera trap video footage is essential for wildlife conservation,
@@ -312,25 +316,7 @@
       </div>
       <!--/ Abstract. -->
 
-
-      <section class="hero teaser">
-        <div class="container is-max-desktop">
-          <div class="hero-body">
-            <video id="chimp" poster="./static/images/poster/disjoint_overlap.png" autoplay  muted loop playsinline alt="Chimp Image" width="100%" height="100%"><source src="./static/videos/disjoint_overlap.mp4" type="video/mp4"> </video>
-            <h2 class="subtitle is-6 has-text-justified" style="padding-top: 1.1428em">
-              <b>PanAf-FGBG Overview:</b> Six foreground-background video pairs are shown to visualise overlapping
-              (left) and disjoint (right) dataset configurations. On the left, train and test videos taken
-              from the same camera are selected, emphasizing that the locations are not mutually exclusive,
-              with backgrounds containing several cues that are highly correlated with the displayed behaviours
-              (i.e., algae fishing, a form of tool use). Train and test videos on the right are extracted from
-              mutually exclusive or <i>disjoint</i> camera locations. They are extracted from forest and savannah,
-              respectively, and highlight the challenge of generalising to new locations.
-            </h2>
-          </div>
-        </div>
-      </section>
-
-      <!-- Paper video. -->
+      <!-- Paper video.
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Video</h2>
@@ -341,14 +327,133 @@
           </div>
         </div>
       </div>
-      <!--/ Paper video. -->
+      Paper video. -->
     </div>
   </section>
 
+
+  <h2 class="title is-3 band">PanAf-FGBG</h2>
+  <section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+           <h2 class="title is-4">Multi-Label Data</h2>
+            <div class="content has-text-justified">
+              <p>
+                The PanAf-FGBG dataset is a multi-label dataset, meaning that each video may contain multiple behaviours from a list of 14 distinct behaviours. The behaviours are: 1) Aggression, 2) Bipedal, 3) Camera reaction, 4) Climbing, 5) Display, 6) Feeding, 7) Grooming, 8) Object carrying, 9) Piloerection, 10) Playing, 11) Resting, 12) Tool use, 13) Travel and 14) Vocalisation.
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/KmP6EVBna6A" frameborder="0" width ="100%" height="100%"
+                allowfullscreen>
+              </iframe>
+              <h2 class="subtitle has-text-justified"> 
+
+              </h2>
+            </div>
+            <h2 class="title is-4">Overlapping & Disjoint Views </h2>
+            <div class="content has-text-justified">
+              <p>
+                The PanAf-FGBG dataset is organised into two distinct views: overlapping (<span class="math">D<sup>overlap</sup></span>) and disjoint (<span class="math">D<sup>disjoint</sup></span>). The overlapping view includes videos captured from camera locations that appear in both the training and testing sets. In contrast, the disjoint view consists of videos recorded from camera locations that are exclusive to either the training or the testing set, <b>but</b> not both.
+
+              <video id="chimp" poster="./static/images/poster/disjoint_overlap.png" autoplay  muted loop playsinline alt="Chimp Image" width="100%" height="100%"><source src="./static/videos/disjoint_overlap.mp4" type="video/mp4"> </video>
+              <h2 class="subtitle is-6" style="font-weight: 400;">
+                <b>PanAf-FGBG Overview:</b> Six foreground-background video pairs are shown to visualise overlapping
+                (left) and disjoint (right) dataset configurations. On the left, train and test videos taken
+                from the same camera are selected, emphasizing that the locations are not mutually exclusive,
+                with backgrounds containing several cues that are highly correlated with the displayed behaviours
+                (i.e., algae fishing, a form of tool use). Train and test videos on the right are extracted from
+                mutually exclusive or <i>disjoint</i> camera locations. They are extracted from forest and savannah,
+                respectively, and highlight the challenge of generalising to new locations.
+              </h2>
+            </div>
+
+
+
+            <h2 class="title is-4">Synthetic Backgrounds (<span class="math">B̃</span>)</h2>
+              <p>
+                In addition to using available foreground-background video pairs, we also generated synthetic background videos (<span class="math">B̃</span>) using the <a href="https://github.com/facebookresearch/sam2">Segment Anything Model 2</a> (SAM2) to extract foreground object masks from videos. The masked foreground regions are then filled using <i>mean pixel value filling</i> based on the surrounding background pixels. The resulting videos serve as synthetic backgrounds (<span class="math">B̃</span>) for training and evaluation purposes.
+              </p>
+              <div id="segmentation-results-carousel" class="carousel results-carousel">
+                <div class="results-item">
+                  <video poster="./static/images/poster/d_disjoint1.png" autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/d_disjoint1.mp4" type="video/mp4">
+                  </video>
+                  <video poster="./static/images/poster/d_overlap1.png" autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/d_overlap1.mp4" type="video/mp4">
+                  </video>
+                  <video poster="./static/images/poster/d_disjoint2.png" autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/d_disjoint2.mp4" type="video/mp4">
+                  </video>
+                  <video poster="./static/images/poster/32923711.png" autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/d_disjoint3.mp4" type="video/mp4">
+                  </video>
+                  <div class="math has-text-centered">F</div>
+                </div>
+                <div class="results-item">
+                  <video poster="./static/images/poster/d_disjoint1_bg.png" autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/d_disjoint1_bg.mp4" type="video/mp4">
+                  </video>
+                  <video poster="./static/images/poster/33986571.png" autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/33986571.mp4" type="video/mp4">
+                  </video>
+                  <video poster="./static/images/poster/d_disjoint2_bg.png"  autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/d_disjoint2_bg.mp4" type="video/mp4">
+                  </video>
+                  <video poster="./static/images/poster/d_disjoint3_bg.png"  autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/d_disjoint3_bg.mp4" type="video/mp4">
+                  </video>
+               
+                  <div class="math has-text-centered">B</div>
+                  
+                </div>
+                <div class="results-item">
+                  <video poster="./static/images/poster/32923713.png" autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/d_disjoint1_masked.mp4" type="video/mp4">
+                  </video>
+                  <video poster="./static/images/poster/32923713.png" autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/d_overlap1_masked.mp4" type="video/mp4">
+                  </video>
+                  <video poster="./static/images/poster/32923713.png"  autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/d_disjoint2_masked.mp4" type="video/mp4">
+                  </video>
+                  <video poster="./static/images/poster/32923713.png"  autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/d_disjoint3_masked.mp4" type="video/mp4">
+                  </video>
+                  <div class="has-text-centered">Step 1: Segmentation (<span class="math">B̃</span>)</div>
+                  
+                </div>
+                <div class="results-item">
+                  <video poster="./static/images/poster/32923713.png" autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/d_disjoint1_filled.mp4" type="video/mp4">
+                  </video>
+                  <video poster="./static/images/poster/32923713.png" autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/d_overlap1_filled.mp4" type="video/mp4">
+                  </video>
+                  <video poster="./static/images/poster/32923713.png"  autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/d_disjoint2_filled.mp4" type="video/mp4">
+                  </video>
+                  <video poster="./static/images/poster/32923713.png"  autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/d_disjoint3_filled.mp4" type="video/mp4">
+                  </video>
+                  <div class="has-text-centered">Step 2: Mean pixel filling (<span class="math">B̃</span>)</div>
+                  
+                </div>
+                </div>
+                
+          </div>
+        </div>
+
+
+        
+      </div>
+  </section>
+
+
+  <h2 class="title is-3 band">Experiments</h2>
   <section class="section">
     <div class="container is-max-desktop">
 
-      <div class="column is-full-width">
+
+       
         <!-- <h2 class="title is-3">Statistics</h2>
 
         <div class="columns is-centered">
@@ -371,10 +476,11 @@
               </div>
           </div>
         </div> -->
-
+   
         <div class="columns is-centered">
           <div class="column is-full-width">
-            <h2 class="title is-3">Experiment 1: Background Reliance</h2>
+       
+            <h2 class="title is-4">Background Reliance</h2>
             <div class="content has-text-justified" style="text-align: center;">
               <p>
                 Background reliance is quantified by training model architectures on the foreground (<span class="math">F</span>), background (<span class="math">B</span>), and synthetic background videos (<span class="math">B̃</span>).
@@ -578,7 +684,7 @@
         
         <div class="columns is-centered">
           <div class="column is-full-width">
-            <h2 class="title is-3by1">Experiment 2: Background Duration</h2>
+            <h2 class="title is-4">Background Duration</h2>
             <div class="content has-text-justified" style="text-align: center;">
               <p>
                 Noting that foreground videos may contain some frames with no animals, effectively supplying background only information for these frames, we aim at quantifying the effect of this on model performance.
@@ -589,12 +695,9 @@
             </div>
           </div> 
         </div>  
-
-
         <div class="columns is-centered">
           <div class="column is-full-width">
-            <h2 class="title is-3">Experiment 3: Background Neutralisation</h2>
-    
+            <h2 class="title is-4">Background Neutralisation</h2>
             <div class="content has-text-justified" style="text-align: center;">
               <p>
                 We present a latent-space normalisation technique that boosts out-of-distribution
@@ -606,9 +709,6 @@
               <h2 class="subtitle has-text-justified is-6" style="font-weight: 400;">
                 <b>Latent Space Background Compensation.</b> The proposed operation uses <span class="math">α</span> to perform a weighted subtraction of background features (computed via the dataset pairing of a real-world, background video) from foreground features in latent space. The dotted line between the encoders indicates shared weights (i.e., they are the same model).
               </h2>
-    
-              
- 
         <div class="table-container">
           <table class="table is-bordered is-hoverable">
               <thead>
@@ -834,10 +934,19 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <h2 class="title is-3 band">Acknowledgements</h2>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="column is-full-width">
+
         <!-- Concurrent Work. -->
         <div class="columns is-centered">
           <div class="column is-full-width">
-            <h2 class="title is-3">Acknowledgements</h2>
+       
 
             <div class="content has-text-justified">
               <p>
@@ -869,22 +978,33 @@
                 (ABC) Global Center”.
               </p>
             </div>
-          </div>
         </div>
         <!--/ Concurrent Work. -->
 
       </div>
   </section>
 
-
-  <section class="section" id="BibTeX">
+  <h2 class="title is-3 band">Citation</h2>
+  <section class="section" id="reference">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
+
       <pre><code>@inproceedings{brookes2025fgbg,
         author    = {Otto Brookes and Maksim Kukushkin and Majid Mirmehdi and Colleen Stephens and Paula Dieguez and Thurston C. Hicks and Sorrel Jones and Kevin Lee and Maureen S. McCarthy and Amelia Meier and Emmanuelle Normand and Erin G. Wessling and Roman M. Wittig and Kevin Langergraber and Klaus Zuberbühler and Lukas Boesch and Thomas Schmid and Mimi Arandjelovic and Hjalmar Kühl and Tilo Burghardt},
         title     = {PanAfFGBG: Understanding the Impact of Backgrounds in Wildlife Behaviour Recognition},
         booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
         year      = {2025}
+      }
+      </code></pre>
+
+      <div style="padding-bottom: 1em;">Also consider citing <a href="https://obrookes.github.io/panaf.github.io/">PanAf20k</a>:</div>
+      <pre><code> @article{brookes2024panaf20k,
+        title={PanAf20K: A Large Video Dataset for Wild Ape Detection & Behaviour Analysis},
+        author={Brookes, Otto and Mirmehdi, Majid and Stephens, Colleen and McCarthy, Maureen and Murai, Mizuki and Normand, Emmanuelle and Vergnes, Virginie and Meier, Amelia and Lapuente, Juan and Wittig, Roman and Dowd, Dervla and Jones, Sorrel and Leinert, Vera and Wessling, Erin and Corogenes, Katherine and  Zuberb{\"u}hler, Klaus and Lee, Kevin and  Angedakin, Samuel and  Langergraber, Kevin and Dieguez, Paula and Maldonado, Nuria and Boesch, Christophe and Arandjelovic, Mimi and K{\"u}hl, Hjalmar and Burghardt, Tilo},
+        title={Editorial for Special Issue on Computer Vision Approaches for Animal Tracking and Modeling},
+        journal={International Journal of Computer Vision (IJCV)},
+        year={2024},
+        doi={10.1007/s11263-024-02003-z}
+        url={https://doi.org/10.1007/s11263-024-02003-z}
       }
       </code></pre>
     </div>
@@ -899,6 +1019,33 @@
       autoplaySpeed: 10000,
       loop: true,
     });
+
+    bulmaCarousel.attach('#segmentation-results-carousel', {
+      slidesToScroll: 3,
+      slidesToShow: 4,
+      autoplay: true,
+      autoplaySpeed: 10000,
+      loop: true,
+      controls: false,
+      
+    });
+
+    // dont show the carousel controls when there is 8 items
+    const carousel = document.querySelector('#segmentation-results-carousel');
+    const items = carousel.querySelectorAll('.results-item');
+    const controls = carousel.querySelector('.slider-controls');
+    const prevButton = carousel.querySelector('.slider-navigation-previous');
+    const nextButton = carousel.querySelector('.slider-navigation-next');
+    // but show it when it showed on small screen
+    if (window.innerWidth <= 768) {
+      prevButton.style.display = 'flex';
+      nextButton.style.display = 'flex';
+    } else {
+      prevButton.style.display = 'none';
+      nextButton.style.display = 'none';
+    }
+    
+    
   </script>
 
 
@@ -906,16 +1053,15 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-8">
-            <img id="footer_image" src="./static/images/footer.png">
+            <img id="footer_image" src="./static/images/footer.svg" alt="Footer Image" width="100%">
         </div>
       </div>
+
       <div class="columns is-centered">
-        <div class="column is-8">
+        <div class="column is-size-7">
           <div class="content has-text-centered">
             <p>
-              This website is licensed under a <a rel="license"
-                href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a> and
-              was adapted from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+              This website was adapted from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
               project page.
             </p>
           </div>
