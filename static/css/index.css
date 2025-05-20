@@ -218,4 +218,7 @@ opacity: 1 !important;
 #chimp {
   padding-top: 1rem ;
 }
+#segmentation-results-carousel video {
+  border-radius: 0px;
+}
 
