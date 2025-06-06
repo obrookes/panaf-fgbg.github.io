@@ -302,8 +302,10 @@
           <div class="column is-three-quarters">
             <p>
               Here we show foreground-background video pairs from the <i>PanAf-FGBG</i> dataset. The first row contains
-              foreground videos (<span class="math">F</span>), and the second row contains background videos (<span
-                class="math">B</span>) for the corresponding camera location.
+              <span class="fg_text">foreground videos (<span class="math">F</span>)</span>, and the second row contains
+              <span class="bg_text">
+                background videos
+                (<span class="math">B</span>)</span> for the corresponding camera location.
             </p>
           </div>
         </div>
@@ -393,9 +395,6 @@
                 </video>
 
             </div>
-
-
-
             <h2 class="title is-4">Synthetic Backgrounds (<span class="math">B̃</span>)</h2>
             <p>
               In addition to using available foreground-background video pairs, we also generated synthetic background
@@ -507,8 +506,9 @@
             <p>
               Background reliance is assessed using three models: a dummy classifier that predicts based on class
               distribution, a
-              background model (<span class="math">B</span>)trained exclusively on background videos, and a foreground
-              model (<span class="math">F</span>)trained solely on foreground videos. Both the background and foreground
+              background model (<span class="math">B</span>) trained exclusively on background videos, and a foreground
+              model (<span class="math">F</span>) trained solely on foreground videos. Both the background and
+              foreground
               models are evaluated on the foreground test set.
             </p>
             <div id="bar-chart" style="width:100%;height:600px;"></div>
@@ -518,15 +518,19 @@
       <div class="columns is-centered">
         <div class="column is-full-width">
           <h2 class="title">Background Neutralisation</h2>
-          <p> To mitigate reliance on background information, we propose a latent-space background compensation
-            technique. This
-            approach subtracts background features from foreground features in the latent space, effectively reducing
-            the influence
-            of background cues on behavior recognition. The subtraction is controlled by a hyperparameter <span
-              class="math">α</span>, which linearly decreases from 1 to 0 during training, allowing the model to
-            gradually shift
-            its focus from background to foreground features.</p>
-          </p>
+          <div class="content has-text-justified">
+
+            <p> To mitigate reliance on background information, we propose a latent-space background compensation
+              technique. This
+              approach subtracts background features from foreground features in the latent space, effectively reducing
+              the influence
+              of background cues on behavior recognition. The subtraction is controlled by a hyperparameter <span
+                class="math">α</span>, which linearly decreases from 1 to 0 during training, allowing the model to
+              gradually shift
+              its focus from background to foreground features.</p>
+
+            </p>
+          </div>
         </div>
       </div>
       <div class="columns is-centered">

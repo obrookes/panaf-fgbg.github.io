@@ -256,3 +256,13 @@ opacity: 1 !important;
   min-width: 300px;
   height: 500px;
 }
+
+.fg_text {
+  text-decoration: underline;
+  text-decoration-color: #9999ff;
+}
+
+.bg_text {
+  text-decoration: underline;
+  text-decoration-color: #ff6666;
+}
