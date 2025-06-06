@@ -171,7 +171,7 @@ const scatterData = [
     x: [-11],
     y: [-11],
     mode: 'markers',
-    type: 'scatter',
+    type: 'scatter', 
     name: 'Foreground-only baseline (F)',
     marker: { size: 15, color: '#d06bbc', symbol: 'square' },
     showlegend: true,
@@ -207,8 +207,8 @@ const scatterData = [
     margin: {
       t: 10,   // reduce top margin (default is usually bigger, like 80)
       b: 10,
-      l: 60,
-      r: 60
+      l: 40,
+      r: 0
     },
     xaxis: { title: 'mAP (%)', range: [25, 42.5] },
     yaxis: { title: 'uAP (%)', range: [50, 75] },
@@ -352,17 +352,18 @@ const scatterData = [
     },
     plot_bgcolor: '#FAFAFA',
     paper_bgcolor: 'white',
-    font: { family: 'Noto Sans, sans-serif' },
+    font: { family: 'Noto Sans, sans-serif'},
     legend: {
-      orientation: 'v',
-      x: 1.1,
-      y: 1,
+      orientation: 'h',
+      x: 0.5,
+      xanchor: 'center',
+      y: -0.1,
       bgcolor: 'rgba(255,255,255,0.8)',
       bordercolor: '#DDD',
       borderwidth: 1,
       font: { size: 12 }
     },
-    margin: { l: 60, r: 180, t: 100, b: 80 }, // Increased top margin for subplot titles
+    margin: { l: 60, r: 60, t: 80, b: 80 }, // Increased top margin for subplot titles
   
     // Add annotations for subplot titles
     annotations: [
@@ -391,7 +392,7 @@ const scatterData = [
     ],
   
     xaxis: {
-      title: 'Model Architecture',
+      title: '',
       domain: [0, 0.45],
       tickfont: { size: 12 },
       titlefont: { size: 14 },
@@ -405,7 +406,7 @@ const scatterData = [
       gridcolor: '#E0E0E0'
     },
     xaxis2: {
-      title: 'Model Architecture',
+      title: '',
       domain: [0.55, 1],
       tickfont: { size: 12 },
       titlefont: { size: 14 },
