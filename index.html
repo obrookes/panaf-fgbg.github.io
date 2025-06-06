@@ -6,13 +6,14 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFJH9CPRS0"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-RFJH9CPRS0');
   </script>
   <meta charset="utf-8">
-  <meta name="description" content="PanAfFGBG: Understanding the Impact of Backgrounds in Wildlife Behaviour Recognition">
+  <meta name="description"
+    content="PanAfFGBG: Understanding the Impact of Backgrounds in Wildlife Behaviour Recognition">
   <meta name="author" content="Otto Brookes, Maksim Kukushkin">
   <meta name="keywords" content="PanAfFGBG, PanAf-FGBG, Wildlife, Behaviour, Recognition, Backgrounds, Dataset, CVPR">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,6 +36,7 @@
   <link rel="apple-touch-icon" href="./static/images/apple-touch-icon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.26.0/plotly.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
@@ -79,8 +81,8 @@
             <h1 class="title is-1 publication-title">PanAfFGBG: Understanding the Impact of Backgrounds in Wildlife
               Behaviour Recognition</h1>
             <h2 class="title is-3">CVPR 2025 (Oral)</h2>
-  
-              <div class="is-size-5 publication-authors">
+
+            <div class="is-size-5 publication-authors">
               <div class="column has-text-centered">
                 <span class="author-block">
                   <a href="https://obrookes.github.io/otto.github.io">Otto Brookes</a><sup>1,2†*</sup>,</span>
@@ -123,15 +125,15 @@
               </div>
             </div>
             <br>
-          <div class="column has-text-centered">
-            <span class="is-5">
-              <sup>*</sup>Otto and Maksim are co-first authors and have equal technical contribution.
-              <br>
-              <sup>†</sup>Otto is the corresponding author.
-            </span>
+            <div class="column has-text-centered">
+              <span class="is-5">
+                <sup>*</sup>Otto and Maksim are co-first authors and have equal technical contribution.
+                <br>
+                <sup>†</sup>Otto is the corresponding author.
+              </span>
 
-            <!-- <div class="is-size-5 publication-authors"> -->
-            <!-- <span class="author-block">
+              <!-- <div class="is-size-5 publication-authors"> -->
+              <!-- <span class="author-block">
                 <a href="https://otto.com">Otto Brookes</a><sup>1,2</sup>,</span>
               <span class="author-block">
                 <a href="http://people.cs.bris.ac.uk/~burghard/">Tilo Burghardt</a><sup>1</sup>,</span>
@@ -144,27 +146,29 @@
             </div> -->
 
 
-            <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- PDF Link. -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2502.21201" class="external-link button is-normal is-dark is-rounded">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Paper</span>
-                  </a>
-                </span>
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2502.21201" class="external-link button is-normal is-dark is-rounded">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span>
-                <!-- Video Link. -->
-                <!-- <span class="link-block">
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- PDF Link. -->
+                  <span class="link-block">
+                    <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Brookes_The_PanAf-FGBG_Dataset_Understanding_the_Impact_of_Backgrounds_in_Wildlife_CVPR_2025_paper.pdf"
+                      class="external-link button is-normal is-dark is-rounded">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2502.21201"
+                      class="external-link button is-normal is-dark is-rounded">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                  <!-- Video Link. -->
+                  <!-- <span class="link-block">
                   <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -173,8 +177,8 @@
                     <span>Video</span>
                   </a>
                 </span> -->
-                <!-- Code Link. -->
-                <!-- <span class="link-block">
+                  <!-- Code Link. -->
+                  <!-- <span class="link-block">
                   <a href="https://github.com/google/nerfies" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -182,111 +186,131 @@
                     <span>Code</span>
                   </a>
                 </span> -->
-                <!-- Dataset Link. -->
-                <span class="link-block">
-                  <a href="https://data.bris.ac.uk/data/dataset/1h73erszj3ckn2qjwm4sqmr2wt"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="far fa-images"></i>
-                    </span>
-                    <span>Dataset</span>
-                  </a>
-              </div>
+                  <!-- Dataset Link. -->
+                  <span class="link-block">
+                    <a href="https://data.bris.ac.uk/data/dataset/1h73erszj3ckn2qjwm4sqmr2wt"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="far fa-images"></i>
+                      </span>
+                      <span>Dataset</span>
+                    </a>
+                </div>
 
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section class="hero is-dark is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="results-item">
+            <video class="fg-video" poster="./static/images/poster/32923711.png" id="item-32923711" autoplay muted loop
+              playsinline height="100%">
+              <source src="./static/videos/32923711.mp4" type="video/mp4">
+            </video>
+            <video class="bg-video" poster="./static/images/poster/32923713.png" id="32923713" autoplay muted loop
+              playsinline height="100%">
+              <source src="./static/videos/32923713.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="results-item">
+            <video class="fg-video" poster="./static/images/poster/33983814.png" id="item-33983814" autoplay muted loop
+              playsinline height="100%">
+              <source src="./static/videos/33983814.mp4" type="video/mp4">
+            </video>
+            <video class="bg-video" poster="./static/images/poster/33983815.png" id="item-33983815" autoplay muted loop
+              playsinline height="100%">
+              <source src="./static/videos/33983815.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="results-item">
+            <video class="fg-video" poster="./static/images/poster/35699632.png" id="item-35699632" autoplay muted loop
+              playsinline height="100%">
+              <source src="./static/videos/35699632.mp4" type="video/mp4">
+            </video>
+            <video class="bg-video" poster="./static/images/poster/35699639.png" id="item-35699639" autoplay muted loop
+              playsinline height="100%">
+              <source src="./static/videos/35699639.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="results-item">
+            <video class="fg-video" poster="./static/images/poster/d_overlap1.png" id="item-overlap1" autoplay muted
+              loop playsinline height="100%">
+              <source src="./static/videos/d_overlap1.mp4" type="video/mp4">
+            </video>
+            <video class="bg-video" poster="./static/images/poster/33986571.png" id="item-33986571" autoplay muted loop
+              playsinline height="100%">
+              <source src="./static/videos/33986571.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="results-item">
+            <video class="fg-video" poster="./static/images/poster/32924829.png" id="item-32924829" autoplay muted loop
+              playsinline height="100%">
+              <source src="./static/videos/32924829.mp4" type="video/mp4">
+            </video>
+            <video class="bg-video" poster="./static/images/poster/32924830.png" id="32924830" autoplay muted loop
+              playsinline height="100%">
+              <source src="./static/videos/32924830.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="results-item">
+            <video class="fg-video" poster="./static/images/poster/59776118.png" id="item-59776118" autoplay muted loop
+              playsinline height="100%">
+              <source src="./static/videos/59776118.mp4" type="video/mp4">
+            </video>
+            <video class="bg-video" poster="./static/images/poster/59776175.png" id="item-59776175" autoplay muted loop
+              playsinline height="100%">
+              <source src="./static/videos/59776175.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="results-item">
+            <video class="fg-video" poster="./static/images/poster/37151492.png" id="item-37151492" autoplay muted loop
+              playsinline height="100%">
+              <source src="./static/videos/37151492.mp4" type="video/mp4">
+            </video>
+            <video class="bg-video" poster="./static/images/poster/37151494.png" id="item-37151494" autoplay muted loop
+              playsinline height="100%">
+              <source src="./static/videos/37151494.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="results-item">
+            <video class="fg-video" poster="./static/images/poster/d_overlap3.png" id="item-overlap3" autoplay muted
+              loop playsinline height="100%">
+              <source src="./static/videos/d_overlap3.mp4" type="video/mp4">
+            </video>
+            <video class="bg-video" poster="./static/images/poster/33986571.png" id="item-33986571a" autoplay muted loop
+              playsinline height="100%">
+              <source src="./static/videos/33986571.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="results-item">
+            <video class="fg-video" poster="./static/images/poster/37138116.png" id="item-37138116" autoplay muted loop
+              playsinline height="100%">
+              <source src="./static/videos/37138116.mp4" type="video/mp4">
+            </video>
+            <video class="bg-video" poster="./static/images/poster/37138117.png" id="item-37138117" autoplay muted loop
+              playsinline height="100%">
+              <source src="./static/videos/37138117.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-three-quarters">
+            <p>
+              Here we show foreground-background video pairs from the <i>PanAf-FGBG</i> dataset. The first row contains
+              foreground videos (<span class="math">F</span>), and the second row contains background videos (<span
+                class="math">B</span>) for the corresponding camera location.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
- <section class="hero is-dark is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="results-item">
-          <video poster="./static/images/poster/32923711.png" id="item-32923711" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/32923711.mp4" type="video/mp4">
-          </video>
-          <video poster="./static/images/poster/32923713.png" id="32923713" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/32923713.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="results-item">
-          <video poster="./static/images/poster/33983814.png" id="item-33983814" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/33983814.mp4" type="video/mp4">
-          </video>
-          <video poster="./static/images/poster/33983815.png" id="item-33983815" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/33983815.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="results-item">
-          <video poster="./static/images/poster/35699632.png" id="item-35699632" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/35699632.mp4" type="video/mp4">
-          </video>
-          <video poster="./static/images/poster/35699639.png" id="item-35699639" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/35699639.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="results-item">
-          <video poster="./static/images/poster/d_overlap1.png" id="item-overlap1" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/d_overlap1.mp4" type="video/mp4">
-          </video>
-          <video poster="./static/images/poster/33986571.png" id="item-33986571" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/33986571.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="results-item">
-          <video poster="./static/images/poster/32924829.png" id="item-32924829" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/32924829.mp4" type="video/mp4">
-          </video>
-          <video poster="./static/images/poster/32924830.png" id="32924830" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/32924830.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="results-item">
-          <video poster="./static/images/poster/59776118.png" id="item-59776118" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/59776118.mp4" type="video/mp4">
-          </video>
-          <video poster="./static/images/poster/59776175.png" id="item-59776175" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/59776175.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="results-item">
-          <video poster="./static/images/poster/37151492.png" id="item-37151492" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/37151492.mp4" type="video/mp4">
-          </video>
-          <video poster="./static/images/poster/37151494.png" id="item-37151494" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/37151494.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="results-item">
-          <video poster="./static/images/poster/d_overlap3.png" id="item-overlap3" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/d_overlap3.mp4" type="video/mp4">
-          </video>
-          <video poster="./static/images/poster/33986571.png" id="item-33986571a" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/33986571.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="results-item">
-          <video poster="./static/images/poster/37138116.png" id="item-37138116" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/37138116.mp4" type="video/mp4">
-          </video>
-          <video poster="./static/images/poster/37138117.png" id="item-37138117" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/37138117.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-three-quarters">
-          <p>
-            Here we show foreground-background video pairs from the <i>PanAf-FGBG</i> dataset. The first row contains foreground videos (<span class="math">F</span>), and the second row contains background videos (<span class="math">B</span>) for the corresponding camera location.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<h2 class="title is-3 band">Abstract</h2>
+  <h2 class="title is-3 band">Abstract</h2>
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Abstract. -->
@@ -335,115 +359,140 @@
   <h2 class="title is-3 band">PanAf-FGBG</h2>
   <section class="section">
     <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column is-full-width">
-           <h2 class="title is-4">Multi-Label Data</h2>
-            <div class="content has-text-justified">
-              <p>
-                The PanAf-FGBG dataset is a multi-label dataset, meaning that each video may contain multiple behaviours from a list of 14 distinct behaviours. The behaviours are: 1) Aggression, 2) Bipedal, 3) Camera reaction, 4) Climbing, 5) Display, 6) Feeding, 7) Grooming, 8) Object carrying, 9) Piloerection, 10) Playing, 11) Resting, 12) Tool use, 13) Travel and 14) Vocalisation.
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-4">Multi-Label Data</h2>
+          <div class="content has-text-justified">
+            <p>
+              The PanAf-FGBG dataset is a multi-label dataset, meaning that each video may contain multiple behaviours
+              from a list of 14 distinct behaviours. The behaviours are: 1) Aggression, 2) Bipedal, 3) Camera reaction,
+              4) Climbing, 5) Display, 6) Feeding, 7) Grooming, 8) Object carrying, 9) Piloerection, 10) Playing, 11)
+              Resting, 12) Tool use, 13) Travel and 14) Vocalisation.
             <div class="publication-video">
-              <iframe src="https://www.youtube.com/embed/KmP6EVBna6A" frameborder="0" width ="100%" height="100%"
+              <iframe src="https://www.youtube.com/embed/KmP6EVBna6A" frameborder="0" width="100%" height="100%"
                 allowfullscreen>
               </iframe>
-              <h2 class="subtitle has-text-justified"> 
+              <h2 class="subtitle has-text-justified">
 
               </h2>
             </div>
-            <h2 class="title is-4">Overlapping & Disjoint Views </h2>
+            <h2 class="title is-4">Overlapping (ID) and Disjoint (OOD) Dataset Views</h2>
+
             <div class="content has-text-justified">
               <p>
-                The PanAf-FGBG dataset is organised into two distinct views: overlapping (<span class="math">D<sup>overlap</sup></span>) and disjoint (<span class="math">D<sup>disjoint</sup></span>). The overlapping view includes videos captured from camera locations that appear in both the training and testing sets. In contrast, the disjoint view consists of videos recorded from camera locations that are exclusive to either the training or the testing set, <b>but</b> not both.
+                The PanAf-FGBG dataset is organised into two distinct views: overlapping (<span
+                  class="math">D<sup>overlap</sup></span>) and disjoint (<span
+                  class="math">D<sup>disjoint</sup></span>). The overlapping view includes videos captured from camera
+                locations that appear in both the training and testing sets. In contrast, the disjoint view consists of
+                videos recorded from camera locations that are exclusive to either the training or the testing set,
+                <b>but</b> not both.
 
-              <video id="chimp" poster="./static/images/poster/disjoint_overlap.png" autoplay  muted loop playsinline alt="Chimp Image" width="100%" height="100%"><source src="./static/videos/disjoint_overlap.mp4" type="video/mp4"> </video>
-              <h2 class="subtitle is-6" style="font-weight: 400;">
-                <b>PanAf-FGBG Overview:</b> Six foreground-background video pairs are shown to visualise overlapping
-                (left) and disjoint (right) dataset configurations. On the left, train and test videos taken
-                from the same camera are selected, emphasizing that the locations are not mutually exclusive,
-                with backgrounds containing several cues that are highly correlated with the displayed behaviours
-                (i.e., algae fishing, a form of tool use). Train and test videos on the right are extracted from
-                mutually exclusive or <i>disjoint</i> camera locations. They are extracted from forest and savannah,
-                respectively, and highlight the challenge of generalising to new locations.
-              </h2>
+                <video id="chimp" poster="./static/images/poster/disjoint_overlap.png" autoplay muted loop playsinline
+                  alt="Chimp Image" width="100%" height="100%">
+                  <source src="./static/videos/disjoint_overlap.mp4" type="video/mp4">
+                </video>
+
             </div>
 
 
 
             <h2 class="title is-4">Synthetic Backgrounds (<span class="math">B̃</span>)</h2>
-              <p>
-                In addition to using available foreground-background video pairs, we also generated synthetic background videos (<span class="math">B̃</span>) using the <a href="https://github.com/facebookresearch/sam2">Segment Anything Model 2</a> (SAM2) to extract foreground object masks from videos. The masked foreground regions are then filled using <i>mean pixel value filling</i> based on the surrounding background pixels. The resulting videos serve as synthetic backgrounds (<span class="math">B̃</span>) for training and evaluation purposes.
-              </p>
-              <div id="segmentation-results-carousel" class="carousel results-carousel">
-                <div class="results-item">
-                  <video poster="./static/images/poster/d_disjoint1.png" autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/d_disjoint1.mp4" type="video/mp4">
-                  </video>
-                  <video poster="./static/images/poster/d_overlap1.png" autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/d_overlap1.mp4" type="video/mp4">
-                  </video>
-                  <video poster="./static/images/poster/d_disjoint2.png" autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/d_disjoint2.mp4" type="video/mp4">
-                  </video>
-                  <video poster="./static/images/poster/32923711.png" autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/d_disjoint3.mp4" type="video/mp4">
-                  </video>
-                  <div class="math has-text-centered">F</div>
-                </div>
-                <div class="results-item">
-                  <video poster="./static/images/poster/d_disjoint1_bg.png" autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/d_disjoint1_bg.mp4" type="video/mp4">
-                  </video>
-                  <video poster="./static/images/poster/33986571.png" autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/33986571.mp4" type="video/mp4">
-                  </video>
-                  <video poster="./static/images/poster/d_disjoint2_bg.png"  autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/d_disjoint2_bg.mp4" type="video/mp4">
-                  </video>
-                  <video poster="./static/images/poster/d_disjoint3_bg.png"  autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/d_disjoint3_bg.mp4" type="video/mp4">
-                  </video>
-               
-                  <div class="math has-text-centered">B</div>
-                  
-                </div>
-                <div class="results-item">
-                  <video poster="./static/images/poster/32923713.png" autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/d_disjoint1_masked.mp4" type="video/mp4">
-                  </video>
-                  <video poster="./static/images/poster/32923713.png" autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/d_overlap1_masked.mp4" type="video/mp4">
-                  </video>
-                  <video poster="./static/images/poster/32923713.png"  autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/d_disjoint2_masked.mp4" type="video/mp4">
-                  </video>
-                  <video poster="./static/images/poster/32923713.png"  autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/d_disjoint3_masked.mp4" type="video/mp4">
-                  </video>
-                  <div class="has-text-centered">Step 1: Segmentation (<span class="math">B̃</span>)</div>
-                  
-                </div>
-                <div class="results-item">
-                  <video poster="./static/images/poster/32923713.png" autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/d_disjoint1_filled.mp4" type="video/mp4">
-                  </video>
-                  <video poster="./static/images/poster/32923713.png" autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/d_overlap1_filled.mp4" type="video/mp4">
-                  </video>
-                  <video poster="./static/images/poster/32923713.png"  autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/d_disjoint2_filled.mp4" type="video/mp4">
-                  </video>
-                  <video poster="./static/images/poster/32923713.png"  autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/d_disjoint3_filled.mp4" type="video/mp4">
-                  </video>
-                  <div class="has-text-centered">Step 2: Mean pixel filling (<span class="math">B̃</span>)</div>
-                  
-                </div>
-                </div>
-                
+            <p>
+              In addition to using available foreground-background video pairs, we also generated synthetic background
+              videos (<span class="math">B̃</span>) using the <a href="https://github.com/facebookresearch/sam2">Segment
+                Anything Model 2</a> (SAM2) to extract foreground object masks from videos. The masked foreground
+              regions are then filled using <i>mean pixel value filling</i> based on the surrounding background pixels.
+              The resulting videos serve as synthetic backgrounds (<span class="math">B̃</span>) for training and
+              evaluation purposes.
+            </p>
+            <div id="segmentation-results-carousel" class="carousel results-carousel">
+              <div class="results-item">
+                <video class="fg-video" poster="./static/images/poster/d_disjoint1.png" autoplay muted loop playsinline
+                  height="100%">
+                  <source src="./static/videos/d_disjoint1.mp4" type="video/mp4">
+                </video>
+                <video class="fg-video" poster="./static/images/poster/d_overlap1.png" autoplay muted loop playsinline
+                  height="100%">
+                  <source src="./static/videos/d_overlap1.mp4" type="video/mp4">
+                </video>
+                <video class="fg-video" poster="./static/images/poster/d_disjoint2.png" autoplay muted loop playsinline
+                  height="100%">
+                  <source src="./static/videos/d_disjoint2.mp4" type="video/mp4">
+                </video>
+                <video class="fg-video" poster="./static/images/poster/32923711.png" autoplay muted loop playsinline
+                  height="100%">
+                  <source src="./static/videos/d_disjoint3.mp4" type="video/mp4">
+                </video>
+                <div class="math has-text-centered">F</div>
+              </div>
+              <div class="results-item">
+                <video class="bg-video" poster="./static/images/poster/d_disjoint1_bg.png" autoplay muted loop
+                  playsinline height="100%">
+                  <source src="./static/videos/d_disjoint1_bg.mp4" type="video/mp4">
+                </video>
+                <video class="bg-video" poster="./static/images/poster/33986571.png" autoplay muted loop playsinline
+                  height="100%">
+                  <source src="./static/videos/33986571.mp4" type="video/mp4">
+                </video>
+                <video class="bg-video" poster="./static/images/poster/d_disjoint2_bg.png" autoplay muted loop
+                  playsinline height="100%">
+                  <source src="./static/videos/d_disjoint2_bg.mp4" type="video/mp4">
+                </video>
+                <video class="bg-video" poster="./static/images/poster/d_disjoint3_bg.png" autoplay muted loop
+                  playsinline height="100%">
+                  <source src="./static/videos/d_disjoint3_bg.mp4" type="video/mp4">
+                </video>
+
+                <div class="math has-text-centered">B</div>
+
+              </div>
+              <div class="results-item">
+                <video class="synthetic-bg" poster="./static/images/poster/32923713.png" autoplay muted loop playsinline
+                  height="100%">
+                  <source src="./static/videos/d_disjoint1_masked.mp4" type="video/mp4">
+                </video>
+                <video class="synthetic-bg" poster="./static/images/poster/32923713.png" autoplay muted loop playsinline
+                  height="100%">
+                  <source src="./static/videos/d_overlap1_masked.mp4" type="video/mp4">
+                </video>
+                <video class="synthetic-bg" poster="./static/images/poster/32923713.png" autoplay muted loop playsinline
+                  height="100%">
+                  <source src="./static/videos/d_disjoint2_masked.mp4" type="video/mp4">
+                </video>
+                <video class="synthetic-bg" poster="./static/images/poster/32923713.png" autoplay muted loop playsinline
+                  height="100%">
+                  <source src="./static/videos/d_disjoint3_masked.mp4" type="video/mp4">
+                </video>
+                <div class="has-text-centered">Step 1: Segmentation (<span class="math">B̃</span>)</div>
+
+              </div>
+              <div class="results-item">
+                <video class="synthetic-bg" poster="./static/images/poster/32923713.png" autoplay muted loop playsinline
+                  height="100%">
+                  <source src="./static/videos/d_disjoint1_filled.mp4" type="video/mp4">
+                </video>
+                <video class="synthetic-bg" poster="./static/images/poster/32923713.png" autoplay muted loop playsinline
+                  height="100%">
+                  <source src="./static/videos/d_overlap1_filled.mp4" type="video/mp4">
+                </video>
+                <video class="synthetic-bg" poster="./static/images/poster/32923713.png" autoplay muted loop playsinline
+                  height="100%">
+                  <source src="./static/videos/d_disjoint2_filled.mp4" type="video/mp4">
+                </video>
+                <video class="synthetic-bg" poster="./static/images/poster/32923713.png" autoplay muted loop playsinline
+                  height="100%">
+                  <source src="./static/videos/d_disjoint3_filled.mp4" type="video/mp4">
+                </video>
+                <div class="has-text-centered">Step 2: Mean pixel filling (<span class="math">B̃</span>)</div>
+
+              </div>
+            </div>
+
           </div>
         </div>
 
 
-        
+
       </div>
   </section>
 
@@ -451,489 +500,53 @@
   <h2 class="title is-3 band">Experiments</h2>
   <section class="section">
     <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-4">Background Reliance</h2>
+          <div class="content has-text-justified" style="text-align: center;">
+            <p>
+              Background reliance is assessed using three models: a dummy classifier that predicts based on class
+              distribution, a
+              background model (<span class="math">B</span>)trained exclusively on background videos, and a foreground
+              model (<span class="math">F</span>)trained solely on foreground videos. Both the background and foreground
+              models are evaluated on the foreground test set.
+            </p>
 
-
-       
-        <!-- <h2 class="title is-3">Statistics</h2>
-
-        <div class="columns is-centered">
-
-          <div class="column">
-            <div class="content">
-              <h2 class="title is-4">Behaviour Distribution</h3>
-                <img id="class_dist" src="./static/images/class_dist.png" alt="Class Distribution" width="90%"
-                  height="90%">
-            </div>
+            <div id="bar-chart" style="width:100%;height:600px;"></div>
           </div>
 
-          <div class="column">
-            <h2 class="title is-4">Habitat</h3>
-              <div class="columns is-centered">
-                <div class="column content">
-                  <img id="habitat_location_dist" src="./static/images/country_site_dist.png"
-                    alt="Habitat & Location Distribution" width="90%" height="90%">
-                </div>
-              </div>
-          </div>
-        </div> -->
-   
-        <div class="columns is-centered">
-          <div class="column is-full-width">
-       
-            <h2 class="title is-4">Experiment 1: Background Reliance</h2>
-            <div class="content has-text-justified" style="text-align: center;">
-              <p>
-                Background reliance is quantified by training model architectures on the foreground (<span class="math">F</span>), background (<span class="math">B</span>), and synthetic background videos (<span class="math">B̃</span>).
-              </p>
-                      <div class="table-container">
-        <table  class="table is-bordered is-hoverable">
-            <thead>
-                <tr>
-                    <th rowspan="2"></th>
-                    <th rowspan="2">Model</th>
-                    <th rowspan="2">Data</th>
-                    <th colspan="2"><span class="math">D<sup>overlap</sup></span></th>
-                    <th colspan="2"><span class="math">D<sup>disjoint</sup></span></th>
-                    <th rowspan="2">Toggle</th>
-                </tr>
-                <tr>
-                    <th>μAP</th>
-                    <th>mAP</th>
-                    <th>μAP</th>
-                    <th>mAP</th>  
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Dummy -->
-                <tr class="gray-bg">
-                    <td>1</td>
-                    <td><b>Dummy</b></td>
-                    <td>-</td>
-                    <td>19.15</td>
-                    <td>14.73</td>
-                    <td>19.61</td>
-                    <td>14.87</td>
-                    <td></td>
-                </tr>
-                
-                <!-- 2D R50 -->
-                <tr >
-                    <td>2</td>
-                    <td rowspan="1"><b>2D R50</b></td>
-                    <td><span class="math">F</span></td>
-                    <td>64.15</td>
-                    <td>41.28</td>
-                    <td>44.67</td>
-                    <td>18.08</td>
-                    <td><button class="toggle-btn button is-small is-dark is-outlined" data-model="model-2dr50">Show more</button></td>
-                </tr>
-                <tr class="model-content model-2dr50">
-                    <td>3</td>
-                    <td></td>
-                    <td><span class="math">B</span></td>
-                    <td>57.13</td>
-                    <td>30.03</td>
-                    <td>45.80</td>
-                    <td>18.27</td>
-                    <td></td>
-                </tr>
-                <tr class="model-content model-2dr50">
-                    <td >4</td>
-                    <td></td>
-                    <td><span class="math">B̃</span></td>
-                    <td>57.87</td>
-                    <td>30.82</td>
-                    <td>48.28</td>
-                    <td>20.39</td>
-                    <td></td>
-                </tr>
-                <tr class="model-content model-2dr50">
-                    <td >5</td>
-                    <td></td>
-                    <td><span class="math">F+B</span></td>
-                    <td>67.74</td>
-                    <td>44.99</td>
-                    <td>45.28</td>
-                    <td>18.84</td>
-                    <td></td>
-                </tr>
-                <tr class="model-content model-2dr50 ratio">
-                    <td>6</td>
-                    <td></td>
-                    <td></td>
-                    <td><i>0.89</i></td>
-                    <td><i>0.74</i></td>
-                    <td><i>1.02</i></td>
-                    <td><i>0.98</i></td>
-                    <td></td>
-                </tr>
-                
-                <!-- 3D R50 -->
-                <tr>
-                    <td >7</td>
-                    <td rowspan="1"><b>3D R50</b></td>
-                    <td><span class="math">F</span></td>
-                    <td>72.79</td>
-                    <td>49.32</td>
-                    <td>57.74</td>
-                    <td>30.89</td>
-                    <td><button class="toggle-btn button is-small is-dark is-outlined" data-model="model-3dr50">Show more</button></td>
-                </tr>
-                <tr class="model-content model-3dr50">
-                    <td >8</td>
-                    <td></td>
-                    <td><span class="math">B</span></td>
-                    <td>58.92</td>
-                    <td>31.72</td>
-                    <td>48.40</td>
-                    <td>21.38</td>
-                    <td></td>
-                </tr>
-                <tr class="model-content model-3dr50">
-                    <td >9</td>
-                    <td></td>
-                    <td><span class="math">B̃</span></td>
-                    <td>59.60</td>
-                    <td>32.86</td>
-                    <td>49.29</td>
-                    <td>21.64</td>
-                    <td></td>
-                </tr>
-                <tr class="model-content model-3dr50">
-                    <td >10</td>
-                    <td></td>
-                    <td><span class="math">F+B</span></td>
-                    <td><b>76.41</b></td>
-                    <td><b>53.57</b></td>
-                    <td>65.66</td>
-                    <td><b>39.17</b></td>
-                    <td></td>
-                </tr>
-                <tr class="model-content model-3dr50 ratio">
-                    <td >11</td>
-                    <td></td>
-                    <td></td>
-                    <td><i>0.80</i></td>
-                    <td><i>0.66</i></td>
-                    <td><i>0.83</i></td>
-                    <td><i>0.69</i></td>
-                    <td></td>
-                </tr>
-                
-                <!-- MViT-V2 -->
-                <tr >
-                    <td >12</td>
-                    <td rowspan="1"><b>MViT-V2</b></td>
-                    <td><span class="math">F</span></td>
-                    <td><u>75.44</u></td>
-                    <td><u>51.54</u></td>
-                    <td><u><b>70.50</b></u></td>
-                    <td><u>35.29</u></td>
-                    <td><button class="toggle-btn button is-small is-dark is-outlined" data-model="model-mvit">Show more</button></td>
-                </tr>
-                <tr class="model-content model-mvit">
-                    <td >13</td>
-                    <td></td>
-                    <td><span class="math">B</span></td>
-                    <td>61.90</td>
-                    <td>32.74</td>
-                    <td>50.03</td>
-                    <td>24.00</td>
-                    <td></td>
-                </tr>
-                <tr class="model-content model-mvit">
-                    <td >14</td>
-                    <td></td>
-                    <td><span class="math">B̃</span></td>
-                    <td>62.15</td>
-                    <td>33.58</td>
-                    <td>52.13</td>
-                    <td>24.77</td>
-                    <td></td>
-                </tr>
-                <tr class="model-content model-mvit">
-                    <td >15</td>
-                    <td></td>
-                    <td><span class="math">F+B</span></td>
-                    <td>72.82</td>
-                    <td>53.49</td>
-                    <td>68.00</td>
-                    <td>38.09</td>
-                    <td></td>
-                </tr>
-                <tr class="model-content model-mvit ratio">
-                    <td >16</td>
-                    <td></td>
-                    <td></td>
-                    <td><i>0.82</i></td>
-                    <td><i>0.65</i></td>
-                    <td><i>0.70</i></td>
-                    <td><i>0.68</i></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-            </div>
-            <h4 class="subtitle is-6 has-text-justified">
-              <b>Quantifying Background Reliance.</b> Performance comparison of models trained on <span class="math">F</span>, <span class="math">B</span>, and <span class="math">B</span> videos. Dual-stream models are indicated by <span class="math">F+B</span>. The absolute highest performance is indicated in <b>bold</b> whereas best performance using only a single-stream is <u>underlined</u>. The performance based on class distribution only is given by a dummy classifier (see row 1). The background-to-foreground performance ratio <span class="math">AP<sup>B</sup>/AP<sup>F</sup></span> also provided <span style="background-color:rgba(173, 216, 230, 0.2);">(see rows 6, 11, and 16)</span>. Performance is reported on <span class="math">D<sup>overlap</sup></span> and  <span class="math">D<sup>disjoint</sup></span> where Fig. visualises an mAP scatter plot between the two for 3D R50.
-            </h4>
 
-          </div> 
-        </div>  
-        
-        <div class="columns is-centered">
-          <div class="column is-full-width">
-            <h2 class="title is-4">Experiment 2: Background Duration</h2>
-            <div class="content has-text-justified" style="text-align: center;">
-              <p>
-                Noting that foreground videos may contain some frames with no animals, effectively supplying background only information for these frames, we aim at quantifying the effect of this on model performance.
-              </p>
-              <figure class="image" id="background_duration">
-                <img src="./static/images/background_concatenation.png" alt="Background Concatenation">
-              </figure>
-            </div>
-          </div> 
-        </div>  
-        <div class="columns is-centered">
-          <div class="column is-full-width">
-            <h2 class="title is-4">Experiment 3: Background Neutralisation</h2>
-            <div class="content has-text-justified" style="text-align: center;">
-              <p>
-                We present a latent-space normalisation technique that boosts out-of-distribution
-                performance by +5.42% mAP for convolutional and +3.75% mAP for transformer-based models.
-              </p>
-              <video id="background_neutralisation" poster="./static/images/poster/background_neutralisation.png" autoplay muted loop playsinline alt="Background Neutralisation Video" width="50%" height="100%">
-                <source src="./static/videos/background_neutralisation.mp4" type="video/mp4">
-              </video>
-              <h2 class="subtitle has-text-justified is-6" style="font-weight: 400;">
-                <b>Latent Space Background Compensation.</b> The proposed operation uses <span class="math">α</span> to perform a weighted subtraction of background features (computed via the dataset pairing of a real-world, background video) from foreground features in latent space. The dotted line between the encoders indicates shared weights (i.e., they are the same model).
-              </h2>
-        <div class="table-container">
-          <table class="table is-bordered is-hoverable">
-              <thead>
-                  <tr>
-                      <th rowspan="2">Model</th>
-                      <th rowspan="2">Subtraction</th>
-                      <th colspan="2"><span class="math">D<sup>overlap</sup></span></th>
-                      <th colspan="2"><span class="math">D<sup>disjoint</sup></span></th>
-                      <th rowspan="2">Toggle</th>
-                  </tr>
-                  <tr>
-                      <th>μAP</th>
-                      <th>mAP</th>
-                      <th>μAP</th>
-                      <th>mAP</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <!-- 2D R50 -->
-                  <tr>
-                      <td rowspan="1" class="table-model-name">2D R50</td>
-                      <td>Baseline (<span class="math">F</span>)</td>
-                      <td>64.15</td>
-                      <td>41.28</td>
-                      <td>44.67</td>
-                      <td>18.08</td>
-                      <td><button class="toggle-btn button is-dark is-small is-outlined" data-model="model-2dr50-bgsub">Show more</button></td>
-                  </tr>
-                  <tr class="model-content model-2dr50-bgsub">
-                      <td class="table-model-name"></td>
-                      <td><span class="math">F+B</span></td>
-                      <td><u>67.74</u></td>
-                      <td><u>44.99</u></td>
-                      <td>45.28</td>
-                      <td>18.84</td>
-                      <td></td>
-                  </tr>
-                  <tr class="model-content model-2dr50-bgsub input-space">
-                      <td class="table-model-name"></td>
-                      <td><span class="math">F−B̃</span></td>
-                      <td>65.96</td>
-                      <td>42.12</td>
-                      <td><b>54.53</b></td>
-                      <td><b>26.65</b></td>
-                      <td></td>
-                  </tr>
-                  <tr class="model-content model-2dr50-bgsub input-space">
-                      <td class="table-model-name"></td>
-                      <td><span class="math">F−B</span></td>
-                      <td><b>72.21</b></td>
-                      <td><b>47.12</b></td>
-                      <td><u>53.73</u></td>
-                      <td><u>25.84</u></td>
-                      <td ></td>
-                  </tr>
-                  <tr class="model-content model-2dr50-bgsub embedding-space">
-                      <td class="table-model-name"></td>
-                      <td>None</td>
-                      <td>56.21</td>
-                      <td>38.84</td>
-                      <td>27.24</td>
-                      <td>17.94</td>
-                      <td></td>
-                  </tr>
-                  <tr class="model-content model-2dr50-bgsub embedding-space">
-                      <td class="table-model-name"></td>
-                      <td>Linear</td>
-                      <td>53.78</td>
-                      <td>39.01</td>
-                      <td>29.75</td>
-                      <td>17.17</td>
-                      <td></td>
-                  </tr>
-                  <tr class="model-content model-2dr50-bgsub embedding-space">
-                      <td class="table-model-name"></td>
-                      <td>Exponential</td>
-                      <td>54.05</td>
-                      <td>37.11</td>
-                      <td>25.80</td>
-                      <td>17.73</td>
-                      <td></td>
-                  </tr>
-                  
-                  <!-- 3D R50 -->
-                  <tr>
-                      <td rowspan="1" class="table-model-name">3D R50</td>
-                      <td>Baseline (<span class="math">F</span>)</td>
-                      <td>72.79</td>
-                      <td>49.32</td>
-                      <td>57.74</td>
-                      <td>30.89</td>
-                      <td><button class="toggle-btn button is-dark is-small is-outlined" data-model="model-3dr50-bgsub">Show more</button></td>
-                  </tr>
-                  <tr class="model-content model-3dr50-bgsub">
-                      <td class="table-model-name"></td>
-                      <td><span class="math">F+B</span></td>
-                      <td><u>76.41</u></td>
-                      <td><b>53.57</b></td>
-                      <td><u>65.66</u></td>
-                      <td>39.17</td>
-                      <td></td>
-                  </tr>
-                  <tr class="model-content model-3dr50-bgsub input-space">
-                      <td class="table-model-name"></td>
-                      <td><span class="math">F−B̃</span></td>
-                      <td>66.51</td>
-                      <td>42.56</td>
-                      <td>53.58</td>
-                      <td>27.98</td>
-                      <td></td>
-                  </tr>
-                  <tr class="model-content model-3dr50-bgsub input-space">
-                      <td class="table-model-name"></td>
-                      <td><span class="math">F−B</span></td>
-                      <td>71.93</td>
-                      <td>46.36</td>
-                      <td>53.92</td>
-                      <td>25.05</td>
-                      <td></td>
-                  </tr>
-                  <tr class="model-content model-3dr50-bgsub embedding-space">
-                      <td class="table-model-name"></td>
-                      <td>None</td>
-                      <td>72.30</td>
-                      <td>51.39</td>
-                      <td>63.14</td>
-                      <td>34.85</td>
-                      <td></td>
-                  </tr>
-                  <tr class="model-content model-3dr50-bgsub embedding-space">
-                      <td class="table-model-name"></td>
-                      <td>Linear</td>
-                      <td><b>77.31</b></td>
-                      <td><u>52.82</u></td>
-                      <td><b>66.69</b></td>
-                      <td>36.31</td>
-                      <td></td>
-                  </tr>
-                  <tr class="model-content model-3dr50-bgsub embedding-space">
-                      <td class="table-model-name"></td>
-                      <td>Exponential</td>
-                      <td>73.52</td>
-                      <td>51.24</td>
-                      <td>64.58</td>
-                      <td><u>36.36</u></td>
-                      <td></td>
-                  </tr>
-                  
-                  <!-- MViT-V2 -->
-                  <tr>
-                      <td rowspan="1" class="table-model-name">MViT-V2</td>
-                      <td>Baseline (<span class="math">F</span>)</td>
-                      <td>75.44</td>
-                      <td>51.54</td>
-                      <td>70.50</td>
-                      <td>35.29</td>
-                      <td><button class="toggle-btn button is-dark is-small is-outlined" data-model="model-mvit-bgsub">Show more</button></td>
-                  </tr>
-                  <tr class="model-content model-mvit-bgsub">
-                      <td class="table-model-name"></td>
-                      <td><span class="math">F+B</span></td>
-                      <td>72.82</td>
-                      <td><u>53.49</u></td>
-                      <td>68.00</td>
-                      <td>38.09</td>
-                      <td></td>
-                  </tr>
-                  <tr class="model-content model-mvit-bgsub input-space">
-                      <td class="table-model-name"></td>
-                      <td><span class="math">F−B̃</span></td>
-                      <td>66.84</td>
-                      <td>42.27</td>
-                      <td>57.21</td>
-                      <td>28.80</td>
-                      <td></td>
-                  </tr>
-                  <tr class="model-content model-mvit-bgsub input-space">
-                      <td class="table-model-name"></td>
-                      <td><span class="math">F−B</span></td>
-                      <td>74.90</td>
-                      <td>49.40</td>
-                      <td>61.22</td>
-                      <td>31.51</td>
-                      <td></td>
-                  </tr>
-                  <tr class="model-content model-mvit-bgsub embedding-space">
-                      <td class="table-model-name"></td>
-                      <td>None</td>
-                      <td>74.23</td>
-                      <td>44.11</td>
-                      <td>68.56</td>
-                      <td>35.14</td>
-                      <td></td>
-                  </tr>
-                  <tr class="model-content model-mvit-bgsub embedding-space">
-                      <td class="table-model-name"></td>
-                      <td>Linear</td>
-                      <td><b>79.32</b><sup>*</sup></td>
-                      <td><b>53.83</b><sup>*</sup></td>
-                      <td><b>71.64</b><sup>*</sup></td>
-                      <td><u>39.04</u></td>
-                      <td></td>
-                  </tr>
-                  <tr class="model-content model-mvit-bgsub embedding-space">
-                      <td class="table-model-name"></td>
-                      <td>Exponential</td>
-                      <td><u>77.70</u></td>
-                      <td>50.93</td>
-                      <td><u>71.28</u></td>
-                      <td><b>39.25</b><sup>*</sup></td>
-                      <td></td>
-                  </tr>
-              </tbody>
-          </table>
+        </div>
       </div>
-            </div>
-            <h2 class="subtitle is-6 has-text-justified">
-                  <b>Quantifying Performance Improvements of Background Subtraction.</b>
-                  Comparison of the 2D R50, 3D R50, and MViT-V2 models on both dataset configurations. Performance is reported when training on (<span class="math">F−B</span>) or (<span class="math">F−B̃</span>) videos in input <span style="background-color: rgba(144, 238, 144, 0.2);">(light green)</span> and embedding space <span style="background-color:rgba(173, 216, 230, 0.2);">(light blue)</span>. <strong>First</strong> and <u>second</u> highest scores are indicated for each model, while the highest overall scores are marked by an asterisk (*).
-            </h2 >
-              
-            <br />
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title">Background Neutralisation</h2>
+          <p> To mitigate reliance on background information, we propose a latent-space background compensation
+            technique. This
+            approach subtracts background features from foreground features in the latent space, effectively reducing
+            the influence
+            of background cues on behavior recognition. The subtraction is controlled by a hyperparameter <span
+              class="math">α</span>, which linearly decreases from 1 to 0 during training, allowing the model to
+            gradually shift
+            its focus from background to foreground features.</p>
+          </p>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-two-fifths is-flex is-align-items-center">
+          <div class="content has-text-justified" style="width: 100%;">
+            <video id="background_neutralisation" poster="./static/images/poster/background_neutralisation.png" autoplay
+              muted loop playsinline alt="Background Neutralisation Video" style="width: 100%; height: auto;">
+              <source src="./static/videos/background_neutralisation.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
+        <div class="column">
+          <div id="scatter-plot" style="width: 100%; height: 500px;"></div>
 
+
+
+        </div>
       </div>
     </div>
   </section>
@@ -946,7 +559,7 @@
         <!-- Concurrent Work. -->
         <div class="columns is-centered">
           <div class="column is-full-width">
-       
+
 
             <div class="content has-text-justified">
               <p>
@@ -978,10 +591,10 @@
                 (ABC) Global Center”.
               </p>
             </div>
-        </div>
-        <!--/ Concurrent Work. -->
+          </div>
+          <!--/ Concurrent Work. -->
 
-      </div>
+        </div>
   </section>
 
   <h2 class="title is-3 band">Citation</h2>
@@ -996,7 +609,8 @@
       }
       </code></pre>
 
-      <div style="padding-bottom: 1em;">Also consider citing <a href="https://obrookes.github.io/panaf.github.io/">PanAf20k</a>:</div>
+      <div style="padding-bottom: 1em;">Also consider citing <a
+          href="https://obrookes.github.io/panaf.github.io/">PanAf20k</a>:</div>
       <pre><code> @article{brookes2024panaf20k,
         title={PanAf20K: A Large Video Dataset for Wild Ape Detection & Behaviour Analysis},
         author={Brookes, Otto and Mirmehdi, Majid and Stephens, Colleen and McCarthy, Maureen and Murai, Mizuki and Normand, Emmanuelle and Vergnes, Virginie and Meier, Amelia and Lapuente, Juan and Wittig, Roman and Dowd, Dervla and Jones, Sorrel and Leinert, Vera and Wessling, Erin and Corogenes, Katherine and  Zuberb{\"u}hler, Klaus and Lee, Kevin and  Angedakin, Samuel and  Langergraber, Kevin and Dieguez, Paula and Maldonado, Nuria and Boesch, Christophe and Arandjelovic, Mimi and K{\"u}hl, Hjalmar and Burghardt, Tilo},
@@ -1009,51 +623,11 @@
       </code></pre>
     </div>
   </section>
-
-  <script>
-  // Separate carousel for results
-    bulmaCarousel.attach('#results-carousel', {
-      slidesToScroll: 3,
-      slidesToShow: 3,
-      autoplay: true,
-      autoplaySpeed: 10000,
-      loop: true,
-    });
-
-    bulmaCarousel.attach('#segmentation-results-carousel', {
-      slidesToScroll: 3,
-      slidesToShow: 4,
-      autoplay: true,
-      autoplaySpeed: 10000,
-      loop: true,
-      controls: false,
-      
-    });
-
-    // dont show the carousel controls when there is 8 items
-    const carousel = document.querySelector('#segmentation-results-carousel');
-    const items = carousel.querySelectorAll('.results-item');
-    const controls = carousel.querySelector('.slider-controls');
-    const prevButton = carousel.querySelector('.slider-navigation-previous');
-    const nextButton = carousel.querySelector('.slider-navigation-next');
-    // but show it when it showed on small screen
-    if (window.innerWidth <= 768) {
-      prevButton.style.display = 'flex';
-      nextButton.style.display = 'flex';
-    } else {
-      prevButton.style.display = 'none';
-      nextButton.style.display = 'none';
-    }
-    
-    
-  </script>
-
-
   <footer class="footer">
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-8">
-            <img id="footer_image" src="./static/images/footer.svg" alt="Footer Image" width="100%">
+          <img id="footer_image" src="./static/images/footer.svg" alt="Footer Image" width="100%">
         </div>
       </div>
 
